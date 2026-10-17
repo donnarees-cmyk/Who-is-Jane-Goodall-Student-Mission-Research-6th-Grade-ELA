@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Is Jane Goodall? Research Booklet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --ink:#2b3a2a; --paper:#f1e8d2; --card:#fbf6e8; --line:#d8cba4; --muted:#5e6a50;
+  --leaf:#5c8a4a; --forest:#2f5d3a; --grass-bg:#d6e8c6; --sun:#c9a227; --sun-bg:#efe0b6;
+  --focus:#1d5fa8; --bad:#a33a2a; --bad-bg:#f2d5c3;
+  --head:Georgia,"Times New Roman",serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background-color:var(--paper);background-image:radial-gradient(circle at 10% 6%,rgba(92,138,74,.16) 0,transparent 36%),radial-gradient(circle at 92% 88%,rgba(92,138,74,.16) 0,transparent 40%);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.55}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+[hidden]{display:none!important}
+
+.hero{background:var(--forest);color:#fff;padding:22px 0 0;border-bottom:6px solid var(--sun)}
+.hero .brand{font-family:var(--head);font-size:1.05rem;color:#e6f0d8;margin:0 0 4px}
+.hero .small{margin:0 0 6px;color:#cfe0c0;font-size:.95rem}
+.hero h1{font-size:clamp(1.8rem,5.2vw,2.8rem);font-weight:700}
+.hero .name{display:flex;gap:10px;align-items:center;margin:14px 0 14px;flex-wrap:wrap}
+.hero label{color:#e6f0d8}
+.hero input{font:inherit;padding:8px 12px;border-radius:8px;border:2px solid #7fa56a;background:#244a2d;color:#fff;min-width:240px}
+.hero input::placeholder{color:#a9c79a}
+#saved{font-size:.9rem;color:#cfe0c0}
+
+.phases,.substeps{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto}
+.phases button{font:inherit;cursor:pointer;border:0;background:#3c7048;color:#e6f0d8;padding:10px 14px;border-radius:10px 10px 0 0;white-space:nowrap}
+.phases button[aria-current="step"]{background:var(--paper);color:var(--ink);font-weight:700}
+.substeps{background:var(--paper);padding:8px 0 2px}
+.substeps button{font:inherit;cursor:pointer;border:2px solid var(--line);background:var(--card);color:var(--ink);padding:5px 12px;border-radius:999px;white-space:nowrap}
+.substeps button[aria-current="step"]{background:var(--forest);color:#fff;border-color:var(--forest);font-weight:700}
+
+.tts{background:var(--card);border-bottom:2px dotted var(--leaf);padding:8px 0}
+.tts .wrap{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.95rem}
+.tts select{font:inherit;padding:4px 8px;border:2px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+#voiceInfo{color:var(--muted);font-size:.85rem;flex-basis:100%}
+
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden;margin:16px 0 4px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--leaf),var(--sun));transition:width .3s}
+.pt{font-size:.92rem;color:var(--muted);margin-bottom:14px}
+
+.step{padding:6px 0 10px}
+.step>h2{font-size:1.8rem;margin:6px 0 4px}
+.lead{color:var(--muted);margin:0 0 14px}
+.card{background:var(--card);border:2px solid var(--line);border-left:10px solid var(--leaf);border-radius:14px;padding:16px 20px;margin-bottom:16px}
+.card h3{font-size:1.25rem;margin-bottom:6px}
+.card p{margin:.4em 0 .7em}
+.lesson{border-left-color:var(--forest)}
+.lessonhead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.tip{background:var(--sun-bg);border-left:6px solid var(--sun);padding:10px 14px;border-radius:0 10px 10px 0;margin:12px 0}
+.try{border-left-color:var(--sun)}
+.try>.qh3::before{content:"✏️ "}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.cols2{grid-template-columns:1fr}}
+.mini{border:2px solid var(--line);border-radius:12px;padding:10px 14px;background:#fffdf6}
+.mini b.h{display:block;font-family:var(--head);font-size:1.1rem;margin-bottom:2px}
+ul.clean{padding-left:20px;margin:6px 0}
+ul.clean li{margin-bottom:4px}
+.chipsrow{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.pill{border:2px solid var(--line);border-radius:999px;padding:3px 12px;background:#fffdf6;font-size:.95rem}
+.passage{background:#fffdf6;border:2px dashed var(--ink);border-radius:12px;padding:14px 18px;margin:12px 0;font-size:1.05rem}
+.passage .lab{display:block;font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.remind{background:var(--sun-bg);border-radius:10px;padding:8px 14px;margin:0 0 16px}
+.remind summary{cursor:pointer;font-weight:700}
+.remind ul{margin:6px 0 4px;padding-left:20px}
+
+.mock{border:3px solid var(--ink);border-radius:12px;background:#fffdf6;padding:16px 18px;margin:12px 0}
+.mock h4{font-family:var(--head);font-size:1.5rem;margin:0 0 6px}
+.mock h5{font-family:var(--head);font-size:1.1rem;margin:12px 0 2px;color:var(--forest);border-bottom:2px solid var(--grass-bg)}
+.mock .sidebar{background:var(--sun-bg);border:2px solid var(--sun);border-radius:8px;padding:8px 12px;margin:10px 0;font-size:.97rem}
+.mock figure{margin:10px 0;text-align:center}
+.mock .pic{font-size:2.6rem;background:var(--grass-bg);border-radius:10px;padding:8px}
+.mock figcaption{font-size:.9rem;font-style:italic;color:var(--muted);margin-top:4px}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:.75rem;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+
+.q{border-top:1px solid var(--line);padding:12px 0}
+.q:first-of-type{border-top:0}
+.qhead{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}
+.qt{font-weight:700;margin:0 0 8px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opts.row{flex-direction:row;flex-wrap:wrap}
+.opt{font:inherit;text-align:left;cursor:pointer;background:#fffdf6;color:var(--ink);border:2px solid var(--line);border-radius:10px;padding:10px 14px;min-height:44px}
+.opt:hover:not(:disabled){background:var(--sun-bg);border-color:var(--sun)}
+.opt.sel{background:var(--sun-bg);border-color:var(--ink);font-weight:700}
+.opt.right{background:var(--grass-bg);border-color:var(--forest);color:var(--ink);font-weight:700;opacity:1}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad);color:var(--bad);opacity:1;text-decoration:line-through}
+.opt:disabled{cursor:default}
+.fb{margin-top:8px;font-size:.98rem}
+.fb.ok{background:var(--grass-bg);border-radius:8px;padding:8px 12px}
+.fb.no{background:var(--bad-bg);border-radius:8px;padding:8px 12px;color:#6b2518}
+
+.btn{font:inherit;cursor:pointer;border-radius:999px;border:2px solid var(--ink);background:#fffdf6;color:var(--ink);padding:7px 16px;text-decoration:none;display:inline-block}
+.btn:hover:not(:disabled){background:var(--sun-bg)}
+.btn.primary{background:var(--forest);border-color:var(--forest);color:#fff}
+.btn.primary:hover:not(:disabled){background:#3c7048}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.small{padding:3px 12px;font-size:.92rem}
+.listen{font:inherit;cursor:pointer;border:2px solid var(--forest);background:#fffdf6;color:var(--forest);border-radius:999px;padding:4px 12px;font-size:.92rem;white-space:nowrap;font-weight:700}
+.listen:hover{background:var(--grass-bg)}
+.navrow{display:flex;justify-content:space-between;gap:10px;margin:10px 0 40px}
+
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:10px 0}
+.vwrap{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.flip{font:inherit;text-align:left;cursor:pointer;border:2px solid var(--ink);border-radius:12px;padding:14px;background:#fffdf6;min-height:150px;color:var(--ink);width:100%}
+.flip .w{font-family:var(--head);font-size:1.45rem;font-weight:700}
+.flip .big{font-size:1.5rem}
+.flip .pos{font-size:.85rem;color:var(--muted)}
+.flip .back{display:none}
+.flip[aria-pressed="true"]{background:var(--grass-bg);border-color:var(--forest)}
+.flip[aria-pressed="true"] .front{display:none}
+.flip[aria-pressed="true"] .back{display:block}
+.flip .hint{font-size:.85rem;color:var(--muted);margin-top:8px}
+
+textarea,select.f,input[type=text].f{font:inherit;color:var(--ink);width:100%;padding:10px 12px;border:2px solid var(--line);border-radius:8px;background:#fffdf6}
+textarea{min-height:90px;resize:vertical}
+select.f{width:auto;min-width:200px}
+textarea:focus,select:focus{border-color:var(--focus)}
+label.f{display:block;font-weight:700;margin:12px 0 4px}
+.count{font-size:.9rem;color:var(--muted);margin-top:3px}
+.count.ok{color:var(--forest);font-weight:700}
+.checks{list-style:none;padding:0;margin:10px 0 0;line-height:1.8}
+.checks li::before{content:"○";display:inline-block;width:24px;color:var(--muted)}
+.checks li.ok::before{content:"✓";color:var(--forest);font-weight:700}
+.checks li.ok{color:var(--forest)}
+.conf{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:6px;align-items:center;margin:6px 0}
+.conf .c{font:inherit;cursor:pointer;border:2px solid var(--line);background:#fffdf6;border-radius:8px;padding:6px 4px;text-align:center;font-size:.92rem}
+.conf .c[aria-pressed="true"]{background:var(--grass-bg);border-color:var(--forest);font-weight:700}
+@media(max-width:600px){.conf{grid-template-columns:1fr 1fr 1fr}.conf>span{grid-column:1/-1;font-weight:700;margin-top:6px}}
+
+.result{border:3px solid var(--ink);border-radius:14px;padding:16px 18px;margin-top:16px;background:#fffdf6}
+.result .score{font-family:var(--head);font-size:2.2rem;font-weight:700}
+.sk{display:flex;justify-content:space-between;gap:10px;border-top:1px dashed var(--line);padding:6px 0;flex-wrap:wrap;align-items:center}
+.shot{border:3px solid var(--ink);border-radius:12px;background:#fffdf6;padding:18px 20px;margin-top:14px}
+.shot-head{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:12px}
+.shot-item{margin-bottom:12px}
+.shot-item b{display:block;font-size:.95rem;color:var(--muted)}
+.shot-item p{margin:2px 0 0;white-space:pre-wrap}
+.warnbox{background:var(--sun-bg);border-left:6px solid var(--sun);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0}
+.finish{background:var(--grass-bg);border-left:6px solid var(--forest);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:16px}
+.finish ol{margin:6px 0 0;padding-left:22px}
+ol.how{padding-left:22px}
+.gate{text-align:center;padding:26px 20px}
+.gate .big{font-size:3rem}
+.inkbar{background:#fffdf6;border-bottom:2px dotted var(--leaf);padding:8px 0}
+.inkbar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.95rem}
+.inkbar button{font:inherit;cursor:pointer;border:2px solid var(--line);background:#fffdf6;color:var(--ink);border-radius:999px;padding:4px 12px}
+.inkbar button[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.inkbar .sw{width:28px;height:28px;padding:0;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.inkbar .sw[aria-pressed="true"]{box-shadow:0 0 0 3px var(--ink);background-clip:padding-box}
+.inkbar .tog{display:flex;gap:6px;align-items:center;font-weight:700}
+.inkbar .hintline{flex-basis:100%;color:var(--muted);font-size:.85rem}
+.inkcard{border-left-color:var(--sun)}
+.inkhead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.inkhead .acts{display:flex;gap:6px}
+.inkhead button{font:inherit;cursor:pointer;border:2px solid var(--line);background:#fffdf6;color:var(--ink);border-radius:999px;padding:2px 10px;font-size:.9rem}
+.inkarea{position:relative;border:2px solid var(--ink);border-radius:10px;background-color:#fffffb;overflow:hidden}
+.inkarea.guide-lines{background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,#cdbf93 31px,#cdbf93 32px)}
+.glabels{position:absolute;inset:0;display:grid;pointer-events:none}
+.glabels.cols{grid-auto-flow:column;grid-auto-columns:1fr}
+.glabels.grid4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
+.glabels span{padding:4px 8px;font-weight:700;font-size:.85rem;color:var(--muted);border-right:2px solid var(--line);border-bottom:2px solid var(--line)}
+.glabels.cols span{border-bottom:2px solid var(--line)}
+.glabels span:last-child{border-right:0}
+.glabels.grid4 span:nth-child(2n){border-right:0}
+.glabels.grid4 span:nth-child(n+3){border-bottom:0}
+.inkcv{position:absolute;left:0;top:0;touch-action:none;z-index:2}
+.inkcv.over{pointer-events:none;z-index:6}
+body.annotate .inkcv.over{pointer-events:auto;cursor:crosshair}
+.card.lesson,.passage,.mock{position:relative}
+.inknote{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@media print{.phases,.substeps,.tts,.inkbar,.inkhead .acts,.navrow,.btn,.listen,.hero .name{display:none!important}.step[hidden]{display:block!important}}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:700px){.cols3{grid-template-columns:1fr}}
+.mini.k{border-top:6px solid #5c8a4a}.mini.w{border-top:6px solid #c9a227}.mini.l{border-top:6px solid #1d5fa8}
+.addrow{display:flex;gap:8px;margin:10px 0}
+.addrow input{flex:1;font:inherit;padding:10px 12px;border:2px solid var(--line);border-radius:10px;background:#fffdf6;color:var(--ink);min-width:0}
+.notes{display:grid;gap:10px;margin-top:10px}
+.note{border:2px solid var(--line);border-left:8px solid var(--leaf);border-radius:12px;padding:10px 14px;background:#fffdf6}
+.note.w{border-left-color:#c9a227}.note.l{border-left-color:#1d5fa8}
+.note .ntext{margin:0 0 6px;font-weight:600;white-space:pre-wrap}
+.note .ans{margin:6px 0;white-space:pre-wrap}
+.note textarea,.aform input.f{margin:6px 0}
+.nacts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nbtn{font:inherit;cursor:pointer;border:2px solid var(--line);background:#fffdf6;color:var(--ink);border-radius:999px;padding:2px 10px;font-size:.9rem}
+.empty{color:var(--muted);font-style:italic;margin:6px 0}
+.badge{display:inline-block;border-radius:999px;padding:1px 10px;font-size:.85rem;font-weight:700;background:var(--sun-bg);margin:2px 6px 2px 0}
+.badge.ok{background:var(--grass-bg);color:var(--forest)}
+.checkrow{display:flex;gap:6px;flex-wrap:wrap}
+.checkrow .c{font:inherit;cursor:pointer;border:2px solid var(--line);background:#fffdf6;border-radius:999px;padding:4px 12px;font-size:.92rem}
+.checkrow .c[aria-pressed="true"]{background:var(--grass-bg);border-color:var(--forest);font-weight:700}
+.aform{margin-top:6px}
+.kwl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:760px){.kwl{grid-template-columns:1fr}}
+.kcol{border:3px solid var(--ink);border-radius:12px;padding:10px 12px;background:#fffffb}
+.kcol h4{font-family:var(--head);margin:0 0 8px;font-size:1.05rem}
+.kcol.k{border-top:10px solid #5c8a4a}.kcol.w{border-top:10px solid #c9a227}.kcol.l{border-top:10px solid #1d5fa8}
+.citem{border-top:1px dashed var(--line);padding:6px 0}
+.citem p{margin:0;white-space:pre-wrap}
+.lcard .note{margin-top:10px}
+
+
+.secbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0 10px}
+.srccard label.tr{display:flex;gap:8px;align-items:flex-start;margin:4px 0}
+.srccard input[type=checkbox]{width:22px;height:22px;flex:none;margin-top:2px}
+.ffrm{display:grid;gap:8px;margin:8px 0}
+.ffrm .btn{justify-self:start}
+.imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+.imgcard{border:2px solid var(--line);border-radius:12px;padding:8px;background:#fffdf6}
+.imgcard img{max-width:100%;border-radius:8px;display:block;margin-bottom:6px}
+.timeline2{position:relative;margin:12px 0;padding:4px 0}
+.timeline2::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:6px;background:var(--forest);transform:translateX(-50%);border-radius:3px}
+.tl{position:relative;display:flex;margin:12px 0}
+.tl .dot{position:absolute;left:50%;top:14px;width:18px;height:18px;border-radius:50%;background:var(--sun);border:3px solid var(--ink);transform:translateX(-50%);z-index:2}
+.tl .tlbox{width:44%;border:2px solid var(--ink);border-radius:12px;padding:8px 12px;background:#fffdf6}
+.tl.l .tlbox{margin-right:auto}.tl.r .tlbox{margin-left:auto}
+.tl .tlbox p{margin:2px 0}
+@media(max-width:640px){.timeline2::before{left:14px}.tl .dot{left:14px}.tl .tlbox,.tl.l .tlbox,.tl.r .tlbox{width:auto;margin-left:36px;margin-right:0}}
+.shot-sec{border-top:3px solid var(--forest);margin-top:14px;padding-top:6px}
+.shot-sec h4{margin:10px 0 2px;font-size:1rem}
+.shot-sec .fact{margin:2px 0;white-space:pre-wrap}
+@media print{
+  .hero,.phases,.substeps,.tts,.inkbar,.bar,.pt,.navrow,footer,#clearAll{display:none!important}
+  .step{display:none!important}
+  .step.printme{display:block!important}
+  .printme > *:not(#shotwrap){display:none!important}
+  #shotwrap{display:block!important}
+  .shot{border:0!important}
+  .shot-sec,.imgcard,.tl{break-inside:avoid}
+}
+
+.pe{display:inline-block}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px)}}
+@keyframes folderOpen{from{opacity:0;transform:perspective(700px) rotateX(-38deg) translateY(-8px)}}
+@keyframes clipWiggle{0%{transform:rotate(-25deg) translateY(-8px);opacity:0}60%{transform:rotate(12deg)}100%{transform:none}}
+@keyframes dropIn{from{opacity:0;transform:translateY(-24px) rotate(-3deg) scale(.97)}}
+@keyframes goneOut{to{opacity:0;transform:scale(.96) translateY(6px)}}
+@keyframes develop{from{opacity:.1;filter:blur(10px) brightness(1.7) sepia(.6)}}
+@keyframes ropeDraw{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes pinPop{from{transform:translateX(-50%) scale(0)}60%{transform:translateX(-50%) scale(1.25)}}
+@keyframes slideL{from{opacity:0;transform:translateX(-26px)}}
+@keyframes slideR{from{opacity:0;transform:translateX(26px)}}
+@keyframes tick{from{transform:scale(0) rotate(-40deg)}60%{transform:scale(1.3)}}
+@keyframes unfold{from{opacity:0;transform:translateY(20px) scaleY(.96)}}
+@keyframes popCheck{40%{transform:scale(1.35)}}
+@keyframes sway{0%,100%{transform:none}30%{transform:rotate(-14deg)}65%{transform:rotate(12deg)}}
+@keyframes riffle{40%{transform:translateY(-5px) rotate(8deg)}}
+@keyframes sprout{from{transform:scale(.3);transform-origin:50% 100%}}
+@keyframes toss{40%{transform:translateY(-9px) rotate(22deg)}}
+@keyframes shine{45%{transform:scale(1.3)}}
+@keyframes flex{25%{transform:rotate(-14deg)}60%{transform:rotate(14deg)}}
+@keyframes twinkle{from{opacity:.2;transform:scale(.6)}}
+@keyframes flip{to{transform:rotate(180deg)}}
+@keyframes snap{40%{transform:scale(1.35)}}
+.step.enter>*{animation:pageIn .5s ease backwards}
+.step.enter>*:nth-child(2){animation-delay:70ms}
+.step.enter>*:nth-child(3){animation-delay:140ms}
+.step.enter>*:nth-child(4){animation-delay:210ms}
+.step.enter>*:nth-child(5){animation-delay:280ms}
+.step.enter>*:nth-child(6){animation-delay:350ms}
+.step.enter>*:nth-child(7){animation-delay:420ms}
+.step.enter>*:nth-child(8){animation-delay:490ms}
+.step.enter>*:nth-child(9){animation-delay:560ms}
+.step.enter>.casefile{animation:folderOpen .65s cubic-bezier(.2,.8,.2,1) backwards}
+.step.enter .casefile::after{animation:clipWiggle 1s .45s ease backwards}
+.note.drop,.srccard.drop,.imgcard.drop{animation:dropIn .55s cubic-bezier(.3,1.4,.5,1) backwards}
+.imgcard.drop img{animation:develop 1.3s ease .15s backwards}
+.gone{animation:goneOut .22s ease forwards}
+.step.enter .timeline2::before{animation:ropeDraw 1s ease backwards}
+.step.enter .tl .dot{animation:pinPop .4s ease backwards;animation-delay:calc(var(--d,0)*140ms + .5s)}
+.step.enter .tl.l .tlbox{animation:slideL .5s ease backwards;animation-delay:calc(var(--d,0)*140ms + .4s)}
+.step.enter .tl.r .tlbox{animation:slideR .5s ease backwards;animation-delay:calc(var(--d,0)*140ms + .4s)}
+.tl.fresh .tlbox{animation:dropIn .55s ease backwards}
+.tl.fresh .dot{animation:pinPop .4s ease backwards}
+.step.enter .checks li.ok::before{animation:tick .45s ease backwards}
+.step.enter .checks li:nth-child(1)::before{animation-delay:300ms}
+.step.enter .checks li:nth-child(2)::before{animation-delay:355ms}
+.step.enter .checks li:nth-child(3)::before{animation-delay:410ms}
+.step.enter .checks li:nth-child(4)::before{animation-delay:465ms}
+.step.enter .checks li:nth-child(5)::before{animation-delay:520ms}
+.step.enter .checks li:nth-child(6)::before{animation-delay:575ms}
+.step.enter .checks li:nth-child(7)::before{animation-delay:630ms}
+.step.enter .checks li:nth-child(8)::before{animation-delay:685ms}
+.step.enter .checks li:nth-child(9)::before{animation-delay:740ms}
+.step.enter .checks li:nth-child(10)::before{animation-delay:795ms}
+.step.enter .checks li:nth-child(11)::before{animation-delay:850ms}
+.step.enter .checks li:nth-child(12)::before{animation-delay:905ms}
+.step.enter .checks li:nth-child(13)::before{animation-delay:960ms}
+.step.enter .checks li:nth-child(14)::before{animation-delay:1015ms}
+.step.enter .checks li:nth-child(15)::before{animation-delay:1070ms}
+.step.enter .checks li:nth-child(16)::before{animation-delay:1125ms}
+.step.enter .checks li:nth-child(17)::before{animation-delay:1180ms}
+.step.enter .checks li:nth-child(18)::before{animation-delay:1235ms}
+.step.enter .checks li:nth-child(19)::before{animation-delay:1290ms}
+.step.enter .checks li:nth-child(20)::before{animation-delay:1345ms}
+.step.enter .checks li:nth-child(21)::before{animation-delay:1400ms}
+.step.enter .checks li:nth-child(22)::before{animation-delay:1455ms}
+.step.enter .checks li:nth-child(23)::before{animation-delay:1510ms}
+.step.enter .checks li:nth-child(24)::before{animation-delay:1565ms}
+.step.enter .checks li:nth-child(25)::before{animation-delay:1620ms}
+.shot.unfolding{animation:unfold .6s ease backwards}
+.srccard input[type=checkbox]:checked{animation:popCheck .3s ease}
+.phases button[aria-current] .pe{animation:hop .6s ease}
+@keyframes hop{40%{transform:translateY(-6px)}}
+.phases button[data-ph="start"][aria-current] .pe{animation:sway .8s ease}
+.phases button[data-ph="sources"][aria-current] .pe{animation:riffle .7s ease}
+.phases button[data-ph="early"][aria-current] .pe{animation:sprout .7s ease}
+.phases button[data-ph="edu"][aria-current] .pe{animation:toss .7s ease}
+.phases button[data-ph="acc"][aria-current] .pe{animation:shine .7s ease}
+.phases button[data-ph="chal"][aria-current] .pe{animation:flex .7s ease}
+.phases button[data-ph="facts"][aria-current] .pe{animation:twinkle .7s ease}
+.phases button[data-ph="time"][aria-current] .pe{animation:flip .8s ease}
+.phases button[data-ph="turnin"][aria-current] .pe{animation:snap .6s ease}
+body.noanim *,body.noanim *::before,body.noanim *::after{animation:none!important;transition:none!important}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+:root{--hand:'Patrick Hand','Comic Sans MS',cursive}
+.bar,.pt{display:none}
+.badge{background:none!important;padding:0!important;border-radius:0!important;font-weight:600;color:var(--muted)}
+.badge.ok{color:var(--forest)}
+.casefile{position:relative;background:#f1dba2;border:2px solid #b08f45;border-radius:4px 14px 14px 14px;padding:20px 18px 12px;margin:34px 0 14px;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.casefile::after{content:"📎";position:absolute;right:14px;top:-12px;font-size:1.7rem}
+.cftab{position:absolute;top:-27px;left:-2px;background:#f1dba2;border:2px solid #b08f45;border-bottom:0;border-radius:10px 10px 0 0;padding:3px 14px;font-family:var(--hand);font-size:1.05rem;letter-spacing:.06em}
+.casefile .mission{font-family:var(--hand);font-size:1.3rem;margin:4px 0;line-height:1.3}
+.casefile .evid{margin:4px 0;font-size:.95rem}
+.casefile .count{margin:6px 0 0;color:#5a4a22}
+.note,.note.w,.note.l,.note.k{background:#fffdf6;border:1px solid #d8cba4;border-top:4px solid #c9564a;box-shadow:0 2px 0 rgba(0,0,0,.08);border-radius:6px}
+.notes .note:nth-child(odd){transform:rotate(-.3deg)}.notes .note:nth-child(even){transform:rotate(.3deg)}
+.imgcard{background:#fff;border:1px solid #d8cba4;border-radius:3px;padding:12px 12px 14px;box-shadow:0 3px 8px rgba(0,0,0,.18);position:relative;transform:rotate(-1deg)}
+.imgs .imgcard:nth-child(even){transform:rotate(1deg)}
+.imgcard::before{content:"";position:absolute;top:-10px;left:50%;width:74px;height:20px;margin-left:-37px;background:rgba(240,210,120,.75);transform:rotate(-3deg)}
+.imgcard input.f{border:0;border-bottom:1px dashed var(--line);background:transparent;font-family:var(--hand);font-size:1.1rem;text-align:center}
+.imgcard .count{font-family:var(--hand);font-size:1.1rem;text-align:center;color:var(--ink)}
+.inkarea.guide-blank{background-image:radial-gradient(#cdbf93 1.2px,transparent 1.2px);background-size:22px 22px}
+.timeline2::before{width:0;background:none;border-left:4px dashed #8a6b3a;border-radius:0}
+.tl .dot{background:radial-gradient(circle at 35% 35%,#ff9a8b,#c9302c 62%);border:2px solid #7a1f1a;box-shadow:0 2px 2px rgba(0,0,0,.3)}
+.tl .tlbox{background:#fffdf6;border:1px solid #d8cba4;border-top:4px solid #c9564a;border-radius:6px;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+.tl .tlbox b{font-family:var(--hand);font-size:1.25rem}
+textarea{min-height:84px}
+
+
+.std{background:#eef5ea;border-left:5px solid var(--leaf);border-radius:8px;padding:6px 12px;margin:6px 0 12px;font-size:.92rem}
+.std .row{margin:3px 0}
+.std b{color:var(--forest)}
+.std .note{color:var(--muted);font-style:italic}
+.stdcard summary{cursor:pointer;font-family:var(--head);font-weight:700;font-size:1.05rem}
+.stdtable{width:100%;border-collapse:collapse;margin-top:10px;font-size:.92rem}
+.stdtable th,.stdtable td{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left}
+.stdtable th{background:var(--sun-bg)}
+.stdline{font-size:.9rem;color:var(--muted);margin-top:2px}
+
+.rescard{border:2px solid var(--line);border-left:8px solid var(--forest);border-radius:12px;padding:10px 14px;margin:10px 0;background:#fffdf6}
+.rescard h4{font-family:var(--head);margin:0 0 2px;font-size:1.05rem}
+.rescard .lvl{color:var(--forest);font-weight:700;font-size:.9rem;margin:0 0 4px}
+.rescard p{margin:4px 0}
+.rescard .heads{font-size:.9rem;color:#6b4e14}
+.rescard .nacts{margin-top:6px}
+.resnote{background:#f1dba2;border-radius:10px;padding:8px 12px;margin:8px 0;font-weight:600}
+.look{background:#fffdf6;border:2px dashed #b08f45;border-radius:12px;padding:8px 14px;margin:6px 0 12px}
+.look h4{font-family:var(--hand);font-size:1.25rem;margin:2px 0 4px}
+.look .lrow{border-top:1px dashed var(--line);padding:6px 0}
+.look .lrow:first-of-type{border-top:0}
+.look .lrow p{margin:2px 0}
+.stepsbig{counter-reset:s;list-style:none;padding:0;margin:8px 0}
+.stepsbig li{counter-increment:s;position:relative;padding:6px 0 6px 42px;margin:4px 0}
+.stepsbig li::before{content:counter(s);position:absolute;left:0;top:4px;width:30px;height:30px;border-radius:50%;background:var(--forest);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+.srchint{background:#f1dba2;border-radius:10px;padding:6px 10px;font-size:.92rem;font-weight:600}
+.srchint[hidden]{display:none}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="brand">🌿🐒🌿 Explorer’s Field Journal</p>
+    <p class="small">Grade 6 ELA · Research booklet</p>
+    <h1>Who Is Jane Goodall? 🔎</h1>
+    <div class="name">
+      <label for="studentName">By</label>
+      <input type="text" id="studentName" placeholder="First and last name" autocomplete="off">
+      <span id="saved" aria-live="polite"></span>
+    </div>
+    <ul class="phases" id="phases" aria-label="Parts of the booklet"></ul>
+  </div>
+</header>
+<div class="wrap"><ul class="substeps" id="substeps" aria-label="Steps in this part"></ul></div>
+
+<div class="tts">
+  <div class="wrap">
+    <span>🔊 <b>Read aloud</b></span>
+    <label>Voice <select id="voiceSel"><option value="female">Female voice (US)</option><option value="male">Male voice (US)</option><option value="mixed">Mixed (prompts male, my notes female)</option></select></label>
+    <label>Speed <select id="speedSel"><option value="0.85">Slow</option><option value="0.95" selected>Normal</option><option value="1.1">Fast</option></select></label>
+    <button type="button" class="btn small" id="stopBtn">⏹ Stop</button>
+    <span id="voiceInfo"></span>
+    <label class="tog" id="animWrap"><input type="checkbox" id="animBox"> ✨ Animations</label>
+  </div>
+</div>
+
+<div class="inkbar">
+  <div class="wrap">
+    <b>✏️ Pen</b>
+    <span id="toolBtns"><button type="button" data-tool="pen" aria-pressed="true">✏️ Pen</button> <button type="button" data-tool="hl" aria-pressed="false">🖍️ Highlighter</button> <button type="button" data-tool="erase" aria-pressed="false">🧽 Eraser</button></span>
+    <span id="swatches" style="display:flex;gap:8px;align-items:center"></span>
+    <span id="sizeBtns"><button type="button" data-size="0" aria-pressed="false" aria-label="Thin">•</button> <button type="button" data-size="1" aria-pressed="true" aria-label="Medium">●</button> <button type="button" data-size="2" aria-pressed="false" aria-label="Thick">⬤</button></span>
+    <button type="button" id="undoBtn">↩️ Undo</button>
+    <span class="hintline">Type your facts in your own words. Use the sketch boxes with your Apple Pencil or stylus to draw.</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="bar" aria-hidden="true"><i id="barfill"></i></div>
+  <div class="pt" id="ptext"></div>
+
+<!-- 0 START -->
+<section class="step" data-phase="start" data-title="Start" hidden>
+  <div class="casefile">
+    <div class="cftab">CASE BRIEFING</div>
+    <p class="mission"><b>Your mission:</b> Build a booklet that explains who Jane Goodall is, using reliable sources and your own words.</p>
+    <p class="count">There is no timer. Careful research is better than fast research. Take the time to get it right.</p>
+  </div>
+  <div class="card lesson">
+    <div class="lessonhead"><h3>How this booklet works</h3><button type="button" class="listen" data-listen="card">🔊 Listen</button></div>
+    <ol class="how">
+      <li>📄 <b>Choose your sources.</b> Find at least two and check that you can trust them.</li>
+      <li>🗂️ <b>Open each case file.</b> Every page has a mission and the evidence to collect.</li>
+      <li>✍️ <b>Write facts in your own words</b> and tell which source each one came from.</li>
+      <li>🖼️ <b>Add pictures.</b> Draw a sketch, or add a photo and tell where it came from.</li>
+      <li>⏳ <b>Build a timeline</b> of important events.</li>
+      <li>✅ <b>Check and turn in.</b> Take screenshots, or save a PDF, and upload it to Canvas.</li>
+    </ol>
+  </div>
+  <div class="card lesson">
+    <div class="lessonhead"><h3>Case rules</h3><button type="button" class="listen" data-listen="card">🔊 Listen</button></div>
+    <ul class="clean">
+      <li>🔎 Every fact needs a source.</li>
+      <li>✏️ Use your own words. Do not copy.</li>
+      <li>⚖️ Two sources are better than one.</li>
+      <li>🤔 Sources can disagree. If they do, write what each one says. That is good research.</li>
+    </ul>
+  </div>
+  <div class="card lesson">
+    <div class="lessonhead"><h3>Writing with your Apple Pencil</h3><button type="button" class="listen" data-listen="card">🔊 Listen</button></div>
+    <p>You can type in any box. You can also <b>write in a box with your Apple Pencil</b>. If Scribble is on, the iPad changes your handwriting into typed words. Write big and clear, and check what appears. The sketch boxes are for drawing and labeling.</p>
+    <p class="tip">🔊 Tap the speaker to hear any prompt or any of your own notes read aloud. Your work saves on this iPad.</p>
+  </div>
+  <div class="card lesson">
+    <div class="lessonhead"><h3>Not sure what to do? Follow these steps</h3><button type="button" class="listen" data-listen="card">🔊 Listen</button></div>
+    <ol class="stepsbig">
+      <li><b>Choose two sources.</b> Tap <b>📄 Sources</b> at the top. Tap <b>Use as my source</b> on Britannica Kids (Students level). Then choose one more from a different place.</li>
+      <li><b>Open a site.</b> Tap <b>Open site</b>. It opens in a new tab. Look at the headings first.</li>
+      <li><b>Read one small part.</b> Then look away and say it to yourself in your own words.</li>
+      <li><b>Come back to this tab</b> and open a case file, like Early Life. Type one fact. Pick which source it came from.</li>
+      <li><b>Check it.</b> Look for the same fact in your second source. Do they agree? If they do not, write what each one says in “Do your sources disagree?”</li>
+      <li><b>Stuck?</b> Try the Kids level, tap 🔊 to hear a prompt, or ask your teacher.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h3>Where can I look?</h3>
+    <p class="resnote">Stay on these pages for this booklet. Your teacher picked them. If a link takes you somewhere else, come back to this tab.</p>
+    <p class="count">Two sources from two different places are better than two from the same site. Britannica Kids (Students) and Britannica Kids (Kids) are the same site. Good second picks are TIME for Kids and Ducksters. Interviews are the best place to find her own words.</p>
+    <div id="approved"></div>
+    <div class="rescard"><h4>📚 Library book</h4><p><b>Who Is Jane Goodall?</b> from the <i>Who Was?</i> series. Ask your school librarian. A book counts as a source. Write its title in My sources.</p></div>
+    <p class="count">Links open in a new tab. Come back to this tab when you are done. Your work is saved. If a site will not open, tell your teacher.</p>
+  </div>
+</section>
+
+<!-- 1 SOURCES -->
+<section class="step" data-phase="sources" data-title="Sources" data-emoji="📄" hidden>
+  <div class="casefile">
+    <div class="cftab">CASE FILE · SOURCES</div>
+    <p class="mission"><b>Mission:</b> Detectives check their sources first. Choose sources you can trust.</p>
+    <p class="count">Add the sources you will use, then check each one. You need at least two reliable sources.</p>
+  </div>
+  <div class="card lesson">
+    <div class="lessonhead"><h3>Is it reliable?</h3><button type="button" class="listen" data-listen="card">🔊 Listen</button></div>
+    <p>Check these four things. A source that passes at least <b>three</b> is a good choice.</p>
+    <ul class="clean">
+      <li>✍️ A named author or an expert organization wrote it.</li>
+      <li>📅 It is up to date.</li>
+      <li>🔗 It lists sources or links to studies.</li>
+      <li>📚 It is trying to teach you, not sell you something or get clicks.</li>
+    </ul>
+  </div>
+  <div class="card" id="srcPicker"></div>
+  <div id="srcList"></div>
+  <p><button type="button" class="btn primary" id="addSrc">+ Add a source</button> <span class="count" id="srcCount"></span></p>
+</section>
+
+<!-- 2-6 SECTION PAGES (built by script) -->
+<section class="step" data-phase="early" data-title="Early Life" data-emoji="🌱" data-sec="early" hidden></section>
+<section class="step" data-phase="edu" data-title="Education & Career" data-emoji="🎓" data-sec="edu" hidden></section>
+<section class="step" data-phase="acc" data-title="Accomplishments" data-emoji="🏆" data-sec="acc" hidden></section>
+<section class="step" data-phase="chal" data-title="Challenges" data-emoji="💪" data-sec="chal" hidden></section>
+<section class="step" data-phase="facts" data-title="Interesting Facts" data-emoji="✨" data-sec="facts" hidden></section>
+
+<!-- 7 TIMELINE -->
+<section class="step" data-phase="time" data-title="Timeline" data-emoji="⏳" hidden>
+  <div class="casefile">
+    <div class="cftab">CASE FILE · TIMELINE</div>
+    <p class="mission"><b>Mission:</b> Put the evidence in order. Add at least <span id="tlGoal"></span> important events. The page sorts them for you.</p>
+    <p class="count">Take your time. Pick events that matter, and tell which source each one came from.</p>
+  </div>
+  <div class="card lesson" id="tlCard"></div>
+  <div class="card"><h3>My timeline</h3><div class="timeline2" id="tlView"></div></div>
+</section>
+
+<!-- 8 TURN IN -->
+<section class="step printme" data-phase="turnin" data-title="Turn In" data-emoji="📸" hidden>
+  <h2>📸 Check and turn in</h2>
+  <p class="lead">Look at your checklist. Fix anything that is not checked, then open your booklet.</p>
+  <div class="card"><h3>1. Check your work</h3><ul class="checks" id="turnChecks" aria-live="polite"></ul></div>
+  <div class="card">
+    <h3>2. Open your booklet page</h3>
+    <p>This page puts your name, your sources, your facts, your pictures, and your timeline in one place.</p>
+    <button class="btn primary" id="showShot" type="button">Show my booklet</button>
+    <button class="btn" id="printShot" type="button">Print or save as PDF</button>
+  </div>
+  <div id="shotwrap"><div id="shot" class="shot" hidden></div></div>
+  <div class="card">
+    <h3>3. Take your screenshot 📸</h3>
+    <p>On your iPad: press the <b>top button and the volume-up button</b> at the same time. (iPad with a Home button? Press the <b>top button and Home</b>.) Tap the little picture in the corner, tap <b>Done</b>, then <b>Save to Photos</b>. The booklet is long, so scroll and take more than one screenshot. You can also tap <b>Print or save as PDF</b> and save one PDF.</p>
+  </div>
+  <div class="card">
+    <h3>4. Upload it to Canvas 📤</h3>
+    <ol class="how">
+      <li>🖥️ Open Canvas and go to our class.</li>
+      <li>📁 Open this assignment.</li>
+      <li>📤 Tap <b>Submit Assignment</b>, then <b>Choose File</b>, then <b>Photo Library</b> (or <b>Files</b> for a PDF), and pick your screenshots.</li>
+      <li>✅ Tap <b>Submit Assignment</b> again and look for the green “Submitted” message.</li>
+    </ol>
+    <p style="margin-top:10px"><a class="btn primary" id="canvasLink" target="_blank" rel="noopener" hidden>Open the Canvas assignment</a></p>
+  </div>
+</section>
+
+  <div class="navrow">
+    <button class="btn" id="backBtn" type="button">← Back</button>
+    <button class="btn primary" id="nextBtn" type="button">Next →</button>
+  </div>
+  <p style="color:var(--muted);font-size:.9rem;margin-bottom:30px">Teacher-made research activity. The prompts are blank on purpose: students find the facts in their own sources.
+    <button class="btn small" id="clearAll" type="button" style="margin-left:8px">Clear my work</button></p>
+</main>
+
+<script>
+(function(){
+  var KEY='goodall-booklet-field-v1';
+  /* ===== TEACHER SETTINGS =====
+     CANVAS_URL: paste your Canvas assignment link (must start with https://). Or share this page as  yourpage.html?canvas=https://...
+     RESOURCES: the approved Jane Goodall pages students may use (see the list below). Change or remove any of them.
+     BLOCK_PASTE: true stops students from pasting long text into fact boxes, so they write in their own words.
+     MIN_SOURCES: how many reliable sources are required.
+     TIMELINE_MIN: how many timeline events are required. */
+  var CANVAS_URL='';
+  /* RESOURCES: the teacher-approved Jane Goodall pages students may use (checked October 17, 2026 from outside the school network,
+     so please open each one on a school iPad to be sure your filter allows it). Edit, add, or remove any of them.
+     Each one needs: id, name, url (must start with https://), level, about, heads (a heads-up for students, or '').
+     Leave the list empty ([]) to hide it. */
+  var RESOURCES=[
+    {id:'bks',name:'Britannica Kids (Students level)',url:'https://kids.britannica.com/students/article/Jane-Goodall/324848',
+      level:'Made for Grades 6 to 8. Start here.',
+      about:'An encyclopedia article with short sections: Introduction, Early Life, Chimpanzee Research, and Later Life and Honors.',
+      heads:'A few buttons on the site need a paid account. You do not need them. Just read the article.'},
+    {id:'bkk',name:'Britannica Kids (Kids level)',url:'https://kids.britannica.com/kids/article/Jane-Goodall/353195',
+      level:'Made for up to Grade 5. Easier words.',
+      about:'The same encyclopedia with simpler words. Use it if the Students level feels too hard. It counts as the same site, not a new source.',
+      heads:'A few buttons on the site need a paid account. You do not need them.'},
+    {id:'tfkc',name:'TIME for Kids: Jane Goodall, A Champion of Conservation',url:'https://www.timeforkids.com/g56/jane-goodall-a-champion-of-conservation-g5/',
+      level:'Written for Grades 5 to 6. Short.',
+      about:'A short article that gives the big picture of her work. A good quick second source.',
+      heads:'It is short, so check details in another source. Do not click “For Grown-ups” at the top.'},
+    {id:'duck',name:'Ducksters: Jane Goodall',url:'https://www.ducksters.com/biography/scientists/jane_goodall.php',
+      level:'Easy to read. Written for kids.',
+      about:'A biography with short sections, like Early Life, Going to Africa, Studying Chimpanzees, and Discoveries and Accomplishments.',
+      heads:'This page has ads. Do not click them. Stay on the biography.'},
+    {id:'tfks',name:'TIME for Kids: The Storyteller',url:'https://www.timeforkids.com/g56/storyteller-jane-goodall/',
+      level:'Written for Grades 5 to 6.',
+      about:'A longer article about how she tells her story, her later work, her youth program Roots & Shoots, and what some critics said.',
+      heads:'This was written in 2021, when she was still alive, so some parts use the present tense. Check the date when you use a fact from it. Do not click “For Grown-ups.”'},
+    {id:'ngs',name:'National Geographic Education: Jane Goodall',url:'https://education.nationalgeographic.org/resource/jane-goodall/',
+      level:'Harder. Longer and more detailed.',
+      about:'A detailed biography from the National Geographic Society. Good for her schooling, her work, and the problems she faced.',
+      heads:'It is long. Read one section at a time.'},
+    {id:'jgi',name:'Jane Goodall Institute: Jane Goodall’s Story',url:'https://janegoodall.org/jane-goodalls-story/',
+      level:'Medium. Written for everyone.',
+      about:'Written by the organization she started. Good for her later work and the programs she began.',
+      heads:'This group asks people to donate and join. It may show mostly the good side. Use it as a second source, not your only one. Ignore the donate buttons.'},
+    {id:'bio',name:'Biography.com: Jane Goodall',url:'https://www.biography.com/scientists/jane-goodall',
+      level:'Medium. Has a quick facts box at the top.',
+      about:'A biography for a general audience.',
+      heads:'This page has ads and shopping links. Do not click them.'},
+    {id:'tfk8',name:'TIME for Kids: 8 Questions for Jane Goodall',url:'https://www.timeforkids.com/a8/eight-questions-for-jane-goodall-g5-8-plus/',
+      level:'Marked Age 8+. An interview. Her own words.',
+      about:'A kid reporter asks her questions, and she answers in her own words. Good for finding a quote.',
+      heads:'It is an interview, not a full biography. It was done in 2023, when she was still alive, so it uses the present tense. If you use a quote, copy her words exactly and keep the quotation marks. Do not click “For Grown-ups.”'},
+    {id:'ngk',name:'National Geographic Kids: Dr Jane Goodall interview',url:'https://www.natgeokids.com/uk/discover/animals/general-animals/jane-goodall-interview/',
+      level:'Easy to read. About a 5-minute read. Her own words.',
+      about:'An interview with her and a quick facts box. Good for finding a quote.',
+      heads:'This is a UK site, so some spellings look different. Hundreds of comments from other kids follow the article. Those are not sources, so stop reading at the end of the article.'}
+  ];
+  /* Which resources help on which page, and what to do there (page ids match the tabs). */
+  var LOOK={
+    early:[['bks','Read the “Early Life” section.'],['duck','Read the “Early Life” section.'],['tfks','Read the beginning for a story from when she was a child.']],
+    edu:[['bks','Read “Early Life” and “Chimpanzee Research.”'],['duck','Read “Going to Africa” and “Studying Chimpanzees.”'],['ngs','Read for her schooling and the work she did.'],['tfkc','Read for the work she did and where she did it.']],
+    acc:[['bks','Read “Chimpanzee Research” and “Later Life and Honors.”'],['duck','Read “Discoveries and Accomplishments.”'],['tfkc','Read for what she proved and the honors she received.'],['jgi','Read about the programs and groups she started.']],
+    chal:[['ngs','Read for what made her work hard and how she handled it.'],['tfk8','Read her answers for problems she faced and what she did about them.'],['tfks','Read “Staying Hopeful.” Do all the people in the article agree with her?'],['bio','Read for problems she faced and what she did about them.']],
+    facts:[['duck','Look for facts that surprise you. Then check each one in a second source.'],['bks','Look for the “Did You Know?” box.'],['ngk','Read her answers to find her own words. Copy them exactly and keep the quotation marks.'],['tfk8','Read her answers to find her own words. Copy them exactly and keep the quotation marks.']],
+    time:[['bks','Look for years in every section.'],['bio','Look at the quick facts box and the years in the story.'],['duck','Look for years in the sections.'],['tfkc','Look for years in the article.']]
+  };
+  var BLOCK_PASTE=true, MIN_SOURCES=2, TIMELINE_MIN=8;
+  /* ANIMATIONS: true shows gentle page animations (students can turn them off with the switch at the top). false removes them. */
+  var ANIMATIONS=true;
+
+  /* what each page asks for (the prompts are blank on purpose: students find the facts) */
+  var SECS=[
+    {id:'early',mission:'Find out where she came from and what her childhood was like. Look for facts that two different sources agree on.',title:'Early Life',emoji:'🌱',lead:'Where did she come from, and how did she grow up?',single:{id:'life',label:'Years of her life',placeholder:'Example: 1900 to 2000'},lists:[
+      {id:'from',kind:'fact',short:'Where she is from',label:'Where is she from?',min:1},
+      {id:'child',kind:'fact',short:'Her childhood',label:'Childhood: when and how did she grow up?',min:2}]},
+    {id:'edu',mission:'Trace her path from school to her life’s work. Find out who helped her along the way.',title:'Education & Career',emoji:'🎓',lead:'What did she study, what work did she do, and who mattered to her?',lists:[
+      {id:'edu',kind:'fact',short:'Her education',label:'Education: where and what did she study?',min:1},
+      {id:'career',kind:'fact',short:'Her career',label:'Career: what work did she do?',min:2},
+      {id:'people',kind:'fact',short:'Important people',label:'Important people in her life: who are they, and why do they matter?',min:2}]},
+    {id:'acc',mission:'Investigate what she achieved and what she is like. Every trait needs proof from her life.',title:'Accomplishments',emoji:'🏆',lead:'What did she achieve, and what is she like?',lists:[
+      {id:'traits',kind:'trait',short:'Five characteristics',label:'5 personal characteristics: a trait and an example that shows it',min:5,max:5},
+      {id:'acc',kind:'fact',short:'Accomplishments',label:'Accomplishments: what did she achieve?',min:2}]},
+    {id:'chal',mission:'Find the obstacles she faced and how she got through them. Then decide what the rest of us can learn.',title:'Challenges',emoji:'💪',lead:'What was hard for her, and what can we learn?',lists:[
+      {id:'chal',kind:'fact',short:'Challenges',label:'What challenges did she face?',min:2},
+      {id:'over',kind:'fact',short:'How she overcame them',label:'How did she overcome her challenges?',min:2},
+      {id:'less',kind:'plain',short:'Lessons',label:'What lessons can we learn from her? (Your own thinking. No source needed.)',min:2}]},
+    {id:'facts',mission:'Collect facts that would surprise a classmate, and find her own words.',title:'Interesting Facts',emoji:'✨',lead:'What would surprise a reader, and what are her own words?',lists:[
+      {id:'know',kind:'fact',short:'Things you may not know',label:'Things you may not know',min:3},
+      {id:'quote',kind:'quote',short:'A quote',label:'Quote: her exact words inside quotation marks',min:1},
+      {id:'res',kind:'plain',short:'Resources to learn more',label:'Resources to learn more (books, movies, websites, museums)',min:2}]}
+  ];
+  var TRUST=['A named author or expert organization wrote it','It is up to date','It lists sources or links to studies','It teaches (it is not selling or chasing clicks)'];
+
+  /* ---------- state ---------- */
+  var S={name:'',step:0,sources:[],items:{},life:'',time:[],images:{},ink:{},dis:{},n:0};
+  try{ var raw=localStorage.getItem(KEY); if(raw) S=Object.assign(S,JSON.parse(raw)); }catch(e){}
+  ['items','images','ink','dis'].forEach(function(k){ S[k]=S[k]||{}; });
+  var REDUCED=false; try{ REDUCED=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches); }catch(e){}
+  if(S.anim===undefined) S.anim=ANIMATIONS&&!REDUCED;
+  if(!ANIMATIONS||REDUCED) S.anim=false;
+  var FRESH={};   /* ids of things just added, so they can animate in once */
+  ['sources','time'].forEach(function(k){ S[k]=S[k]||[]; });
+  var savedEl=document.getElementById('saved'), tmr=null;
+  function save(){
+    clearTimeout(tmr);
+    tmr=setTimeout(function(){
+      try{ localStorage.setItem(KEY,JSON.stringify(S)); savedEl.textContent='Saved on this iPad'; }
+      catch(e){ savedEl.textContent='Could not save here. Remove a photo or do not close this page.'; }
+    },250);
+  }
+  function h(tag,attrs,kids){
+    var el=document.createElement(tag);
+    if(attrs) Object.keys(attrs).forEach(function(k){
+      if(k==='class') el.className=attrs[k];
+      else if(k==='text') el.textContent=attrs[k];
+      else if(k.slice(0,2)==='on') el.addEventListener(k.slice(2),attrs[k]);
+      else el.setAttribute(k,attrs[k]);
+    });
+    (kids||[]).forEach(function(c){ el.appendChild(c); });
+    return el;
+  }
+  function $(id){ return document.getElementById(id); }
+  function words(s){ s=(s||'').trim(); return s?s.split(/\s+/).length:0; }
+  function uid(){ S.n=(S.n||0)+1; return 'n'+S.n; }
+  function arr(id){ return S.items[id]||(S.items[id]=[]); }
+
+  /* ---------- read aloud (US English female and male voices only) ---------- */
+  var voices=[];
+  function loadVoices(){ voices=('speechSynthesis' in window)?(window.speechSynthesis.getVoices()||[]):[]; info(); }
+  if('speechSynthesis' in window){ loadVoices(); window.speechSynthesis.onvoiceschanged=loadVoices; }
+  function isUS(v){ return /^en[-_]US$/i.test((v&&v.lang)||''); }
+  function genderOf(v){ var n=v.name||'', FEM=/(\bfemale\b|samantha|\bava\b|allison|aria|jenny|zira|susan|nicky|zoe|joelle|noelle|salli|kendra|kimberly|joanna|ivy|emma|michelle|ana\b|google us english)/i, MAL=/(\bmale\b|\balex\b|aaron|\bfred\b|\bguy\b|davis|\btom\b|david|\bmark\b|evan|nathan|matthew|joey|justin|kevin|brian|eric\b|christopher|roger|steffan)/i; if(FEM.test(n)) return 'female'; if(MAL.test(n)) return 'male'; return 'unknown'; }
+  function vScore(v,g){
+    var n=v.name, s=0;
+    if(!isUS(v)) return -1000;                      /* US English voices only */
+    var gd=genderOf(v);
+    if(gd===g) s+=20; else if(gd!=='unknown') s-=20;
+    if(/google/i.test(n)) s+=6;
+    if(/natural|neural|premium|enhanced|siri/i.test(n)) s+=8;
+    if(/compact|espeak|novelty|whisper|bad news|bahh|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|zarvox|albert|junior|kathy|ralph|eddy|\bflo\b|grandma|grandpa|rocko|sandy|shelley|\breed\b/i.test(n)) s-=30;
+    return s;
+  }
+  function best(g){ var b=null, bs=-500; voices.forEach(function(v){ var s=vScore(v,g); if(s>bs){ bs=s; b=v; } }); return b; }
+  function genderFor(role){ var m=$('voiceSel').value; if(m==='male') return 'male'; if(m==='mixed') return role==='q'?'female':'male'; return 'female'; }
+  function info(){
+    var el=$('voiceInfo');
+    if(!voices.length){ el.textContent='Read aloud uses the US English voices on this device.'; return; }
+    function say(g){
+      var v=best(g);
+      if(!v) return 'no US English voice was found, so the device default is used';
+      return v.name+(genderOf(v)===g?'':' (this device has no US '+g+' voice, so this US voice is used)');
+    }
+    var m=$('voiceSel').value;
+    if(m==='female') el.textContent='US female voice: '+say('female')+'.';
+    else if(m==='male') el.textContent='US male voice: '+say('male')+'.';
+    else el.textContent='Lessons: US male voice, '+say('male')+'. Notes and questions: US female voice, '+say('female')+'.';
+  }
+  $('voiceSel').addEventListener('change',info);
+  function clean(t){ return (t||'').replace(/\p{Extended_Pictographic}|\uFE0F|\u200D|[\u2750-\u2767\u275D\u275E]/gu,'').replace(/\b[A-Z]{2,}\b/g,function(w){ return w==='ELA'?w:w.toLowerCase(); }).replace(/_+/g,' blank ').replace(/["“”]/g,'').replace(/\s+/g,' ').trim(); }
+  function sentence(t){ t=clean(t); if(!t) return ''; return /[.!?:;]$/.test(t)?t:t+'.'; }
+  function stopSpeech(){ if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+  function speak(text,role){
+    if(!('speechSynthesis' in window)) return;
+    stopSpeech();
+    var v=best(genderFor(role)), rate=parseFloat($('speedSel').value)||0.95;
+    (text.match(/[^.!?]+[.!?]*/g)||[text]).forEach(function(c){
+      c=c.trim(); if(!c) return;
+      var u=new SpeechSynthesisUtterance(c);
+      if(v){ u.voice=v; u.lang=v.lang; } else u.lang='en-US';
+      u.rate=rate; window.speechSynthesis.speak(u);
+    });
+  }
+  $('stopBtn').addEventListener('click',stopSpeech);
+  function cardText(card){
+    var parts=[];
+    card.querySelectorAll('h3, p, li, .mini, .chipsrow, .cer > div, .formula .box').forEach(function(n){
+      var isBox=n.classList.contains('mini')||n.classList.contains('box');
+      if(!isBox && n.closest('.mini, .box')) return;
+      var t;
+      if(n.classList.contains('chipsrow')){
+        t=Array.prototype.map.call(n.children,function(c){ return c.textContent.trim(); }).join(', ');
+      } else if(isBox){
+        var hd=n.querySelector('b.h')||n.querySelector('b');
+        t=hd ? sentence(hd.textContent)+' '+sentence(n.textContent.slice(n.textContent.indexOf(hd.textContent)+hd.textContent.length)) : n.textContent;
+      } else { t=n.textContent; }
+      parts.push(sentence(t.replace(/Listen to this lesson|Listen/g,'')));
+    });
+    return parts.join(' ');
+  }
+  function listenBtn(getText,role,label){
+    return h('button',{type:'button',class:'listen','aria-label':'Read aloud',text:label||'🔊',onclick:function(){ speak(getText(),role||'q'); }});
+  }
+  function qSpeech(q){
+    return sentence(q.q)+' '+q.o.map(function(t,i){ return 'Choice '+String.fromCharCode(65+i)+'. '+sentence(t); }).join(' ');
+  }
+  /* wire the static "Listen" buttons in the HTML */
+  document.querySelectorAll('.listen[data-listen]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var key=b.dataset.listen, role='lesson';
+      if(key==='card'){ speak(cardText(b.closest('.card')),role); return; }
+      var el=document.getElementById(key); if(!el) return;
+      if(el.classList.contains('mock')){
+        var parts=[]; el.querySelectorAll('h4, h5, p, figcaption, .sidebar').forEach(function(n){ parts.push(sentence(n.textContent)); });
+        speak(parts.join(' '),'q');
+      } else { var pt=el.querySelector('.ptext'); speak(sentence(pt?pt.textContent:el.textContent),'q'); }
+    });
+  });
+
+  /* ---------- ink: write with an Apple Pencil or stylus ---------- */
+  var INK={tool:'pen',color:'#1b1b1b',size:1,annotate:false,penSeen:false,last:null};
+  var PEN_C=['#1b1b1b','#1d5fa8','#b3261e','#2f7d32','#7b3fa0'], HL_C=['#ffe14d','#ff9bd0','#9be564','#7fd3ff'];
+  var PEN_W=[1.6,2.6,4.5], HL_W=[12,18,26];
+  var inkAll=[], inkBoxes=[];
+  function drawStroke(ctx,W,H,s){
+    var pts=s.p; if(!pts||!pts.length) return;
+    ctx.lineCap='round'; ctx.lineJoin='round';
+    if(s.t==='hl'){
+      ctx.save(); ctx.globalAlpha=0.35; ctx.strokeStyle=s.c; ctx.lineWidth=s.w; ctx.beginPath();
+      ctx.moveTo(pts[0][0]*W,pts[0][1]*H);
+      for(var i=1;i<pts.length;i++) ctx.lineTo(pts[i][0]*W,pts[i][1]*H);
+      if(pts.length===1) ctx.lineTo(pts[0][0]*W+0.1,pts[0][1]*H);
+      ctx.stroke(); ctx.restore(); return;
+    }
+    ctx.strokeStyle=s.c; ctx.fillStyle=s.c;
+    if(pts.length===1){ ctx.beginPath(); ctx.arc(pts[0][0]*W,pts[0][1]*H,s.w*(0.5+pts[0][2])/2,0,6.2832); ctx.fill(); return; }
+    for(var j=1;j<pts.length;j++){
+      var a=pts[j-1], b=pts[j];
+      ctx.lineWidth=s.w*(0.5+(a[2]+b[2])/2);
+      ctx.beginPath(); ctx.moveTo(a[0]*W,a[1]*H); ctx.lineTo(b[0]*W,b[1]*H); ctx.stroke();
+    }
+  }
+  function InkCanvas(host,id,overlay){
+    var cv=document.createElement('canvas'); cv.className='inkcv'+(overlay?' over':''); host.appendChild(cv);
+    var ctx=cv.getContext('2d'), strokes=S.ink[id]||(S.ink[id]=[]);
+    var W=1,H=1,dpr=Math.max(1,window.devicePixelRatio||1), cur=null, pid=null, erasing=false, changed=false;
+    function size(){
+      var r=host.getBoundingClientRect(), w=Math.max(1,Math.round(r.width)), hh=Math.max(1,Math.round(r.height));
+      if(w===W&&hh===H&&cv.width) return;
+      W=w; H=hh; cv.width=Math.round(w*dpr); cv.height=Math.round(hh*dpr); cv.style.width=w+'px'; cv.style.height=hh+'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0); redraw();
+    }
+    function redraw(){ ctx.clearRect(0,0,W,H); strokes.forEach(function(s){ drawStroke(ctx,W,H,s); }); }
+    function addPoint(e,r){
+      var pr=e.pointerType==='pen'?Math.max(0.15,e.pressure||0.5):0.5;
+      var nx=(e.clientX-r.left)/W, ny=(e.clientY-r.top)/H, last=cur.p[cur.p.length-1];
+      if(last&&Math.abs(last[0]-nx)*W<1.2&&Math.abs(last[1]-ny)*H<1.2) return;
+      cur.p.push([+nx.toFixed(4),+ny.toFixed(4),+pr.toFixed(2)]);
+      if(cur.t==='hl'){ redraw(); drawStroke(ctx,W,H,cur); }
+      else if(cur.p.length>1){ drawStroke(ctx,W,H,{t:'pen',c:cur.c,w:cur.w,p:cur.p.slice(-2)}); }
+      else drawStroke(ctx,W,H,cur);
+    }
+    function eraseAt(x,y){
+      for(var i=strokes.length-1;i>=0;i--){
+        if(strokes[i].p.some(function(q){ var dx=q[0]*W-x, dy=q[1]*H-y; return dx*dx+dy*dy<196; })){ strokes.splice(i,1); changed=true; }
+      }
+      if(changed) redraw();
+    }
+    cv.addEventListener('pointerdown',function(e){
+      if(overlay&&!INK.annotate) return;
+      if(e.pointerType==='pen') INK.penSeen=true;
+      if(e.pointerType==='touch'&&INK.penSeen) return;     /* palm rejection once a Pencil is in use */
+      if(pid!==null) return;
+      e.preventDefault(); pid=e.pointerId; INK.last=inst;
+      try{ cv.setPointerCapture(pid); }catch(err){}
+      var r=cv.getBoundingClientRect();
+      if(INK.tool==='erase'){ erasing=true; changed=false; eraseAt(e.clientX-r.left,e.clientY-r.top); return; }
+      var hl=INK.tool==='hl';
+      cur={t:hl?'hl':'pen',c:INK.color,w:(hl?HL_W:PEN_W)[INK.size],p:[]};
+      addPoint(e,r);
+    });
+    cv.addEventListener('pointermove',function(e){
+      if(e.pointerId!==pid) return;
+      var r=cv.getBoundingClientRect();
+      if(erasing){ eraseAt(e.clientX-r.left,e.clientY-r.top); return; }
+      if(!cur) return;
+      var evs=(e.getCoalescedEvents&&e.getCoalescedEvents())||[]; if(!evs.length) evs=[e];
+      evs.forEach(function(ev){ addPoint(ev,r); });
+    });
+    function end(e){
+      if(e.pointerId!==pid) return;
+      if(cur&&cur.p.length){ strokes.push(cur); save(); }
+      if(erasing&&changed) save();
+      cur=null; pid=null; erasing=false; changed=false;
+    }
+    cv.addEventListener('pointerup',end); cv.addEventListener('pointercancel',end);
+    var inst={id:id,size:size,redraw:redraw,
+      undo:function(){ if(strokes.length){ strokes.pop(); redraw(); save(); } },
+      clear:function(){ strokes.length=0; redraw(); save(); }};
+    inkAll.push(inst); size();
+    if(window.ResizeObserver) new ResizeObserver(size).observe(host);
+    return inst;
+  }
+  function inkResize(){ inkAll.forEach(function(i){ i.size(); }); }
+  function inkImage(id,w,hh){
+    var strokes=S.ink[id]||[]; if(!strokes.length) return null;
+    var cv=document.createElement('canvas'); cv.width=w*2; cv.height=hh*2;
+    var ctx=cv.getContext('2d'); ctx.fillStyle='#ffffff'; ctx.fillRect(0,0,cv.width,cv.height); ctx.scale(2,2);
+    strokes.forEach(function(s){ drawStroke(ctx,w,hh,s); });
+    var img=new Image(); img.src=cv.toDataURL('image/png'); img.alt='Handwritten notes'; img.style.width='100%'; img.style.border='1px solid #d8cba4';
+    return img;
+  }
+  function initInk(){
+    /* writing boxes (teacher and students can both write in them) */
+    document.querySelectorAll('.inkbox').forEach(function(el){
+      var id=el.dataset.id, hgt=parseInt(el.dataset.h,10)||220, guide=el.dataset.guide||'lines', labels=(el.dataset.labels||'').split('|').filter(Boolean), title=el.dataset.label||'✏️ Write here';
+      var area=h('div',{class:'inkarea guide-'+guide}); area.style.height=hgt+'px';
+      if(labels.length&&(guide==='cols'||guide==='grid4')){
+        var g=h('div',{class:'glabels '+guide}); labels.forEach(function(t){ g.appendChild(h('span',{text:t})); }); area.appendChild(g);
+      }
+      var inst=null, clr=null;
+      var undoB=h('button',{type:'button',text:'↩️ Undo',onclick:function(){ inst.undo(); }});
+      clr=h('button',{type:'button',text:'🗑️ Clear',onclick:function(){
+        if(clr.dataset.armed){ inst.clear(); delete clr.dataset.armed; clr.textContent='🗑️ Clear'; }
+        else{ clr.dataset.armed='1'; clr.textContent='Tap again to erase'; setTimeout(function(){ delete clr.dataset.armed; clr.textContent='🗑️ Clear'; },3000); }
+      }});
+      el.appendChild(h('div',{class:'inkhead'},[h('b',{text:title}),h('span',{class:'acts'},[undoB,clr])]));
+      el.appendChild(area);
+      inst=InkCanvas(area,id,false);
+      inkBoxes.push({id:id,label:title.replace(/^✏️\s*/,''),h:hgt,labels:labels});
+    });
+    /* mark-up layers on top of the lessons and passages (turned on with the "Mark up the page" switch) */
+    document.querySelectorAll('.step[data-phase="teach"] .card.lesson').forEach(function(card,i){ InkCanvas(card,'ov-lesson'+i,true); });
+    ['passage1','passage2','passage3'].forEach(function(id){ var el=$(id); if(el) InkCanvas(el,'ov-'+id,true); });
+    /* tool bar */
+    function renderTools(){
+      Array.prototype.forEach.call(document.querySelectorAll('#toolBtns button'),function(b){ b.setAttribute('aria-pressed',b.dataset.tool===INK.tool?'true':'false'); });
+      Array.prototype.forEach.call(document.querySelectorAll('#sizeBtns button'),function(b){ b.setAttribute('aria-pressed',parseInt(b.dataset.size,10)===INK.size?'true':'false'); });
+      var sw=$('swatches'); sw.innerHTML='';
+      if(INK.tool==='erase'){ sw.appendChild(document.createTextNode('Drag over a mark to erase it')); return; }
+      var cols=INK.tool==='hl'?HL_C:PEN_C; if(cols.indexOf(INK.color)<0) INK.color=cols[0];
+      cols.forEach(function(c){
+        var b=h('button',{type:'button',class:'sw','aria-label':'Color '+c,'aria-pressed':c===INK.color?'true':'false'}); b.style.background=c;
+        b.addEventListener('click',function(){ INK.color=c; renderTools(); }); sw.appendChild(b);
+      });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('#toolBtns button'),function(b){ b.addEventListener('click',function(){ INK.tool=b.dataset.tool; renderTools(); }); });
+    Array.prototype.forEach.call(document.querySelectorAll('#sizeBtns button'),function(b){ b.addEventListener('click',function(){ INK.size=parseInt(b.dataset.size,10); renderTools(); }); });
+    $('undoBtn').addEventListener('click',function(){ if(INK.last) INK.last.undo(); });
+    if($('annoBox')) $('annoBox').addEventListener('change',function(){ INK.annotate=this.checked; document.body.classList.toggle('annotate',this.checked); });
+    renderTools();
+  }
+
+  /* ---------- name ---------- */
+  var nameEl=$('studentName'); nameEl.value=S.name||'';
+  nameEl.addEventListener('input',function(){ S.name=nameEl.value; save(); renderChecks(); });
+
+  /* ---------- helpers for sources ---------- */
+  function srcById(id){ return S.sources.filter(function(s){ return s.id===id; })[0]; }
+  function srcName(id){ var s=srcById(id); return s&&(s.name||'').trim()?s.name.trim():''; }
+  function reliable(s){ return (s.checks||[]).filter(Boolean).length>=3; }
+  function fillSrcSelect(sel,val){
+    sel.innerHTML=''; sel.appendChild(h('option',{value:'',text:'Which source?'}));
+    S.sources.forEach(function(s){ if((s.name||'').trim()) sel.appendChild(h('option',{value:s.id,text:s.name.trim()})); });
+    sel.value=val||'';
+  }
+  function hasSources(){ return S.sources.some(function(s){ return (s.name||'').trim(); }); }
+  /* tell students what to do when there is nothing to pick yet */
+  function srcHint(){
+    var d=h('div',{class:'srchint'},[h('span',{text:'You have no sources yet. Add one first, then come back and pick it here. '}),
+      h('button',{type:'button',class:'btn small',text:'Go to Sources',onclick:function(){ var i=steps.findIndex(function(x){ return x.dataset.phase==='sources'; }); show(i); }})]);
+    d.hidden=hasSources(); return d;
+  }
+  /* keep every "Which source?" menu in step with My sources, without losing what the student already typed */
+  function refreshSrcSelects(){
+    Array.prototype.forEach.call(document.querySelectorAll('select[aria-label="Which source"],select[aria-label="Pick a source"]'),function(sel){ fillSrcSelect(sel,sel.value); });
+    Array.prototype.forEach.call(document.querySelectorAll('.srchint'),function(d){ d.hidden=hasSources(); });
+  }
+  function twoTap(btn,label,action){
+    btn.addEventListener('click',function(){
+      if(btn.dataset.armed){
+        var gone=btn.closest?btn.closest('.note,.imgcard,.srccard'):null;
+        if(gone&&S.anim){ gone.classList.add('gone'); setTimeout(action,230); } else action();
+        return;
+      }
+      btn.dataset.armed='1'; btn.textContent='Tap again'; setTimeout(function(){ delete btn.dataset.armed; btn.textContent=label; },3000);
+    });
+  }
+  function noPaste(el,warn){
+    el.addEventListener('paste',function(e){
+      if(!BLOCK_PASTE) return;
+      var t=''; try{ t=(e.clipboardData||window.clipboardData).getData('text')||''; }catch(err){}
+      if(t.length>60){ e.preventDefault(); if(warn){ warn.textContent='That is a lot of text to paste. Put it in your own words.'; warn.hidden=false; } }
+    });
+  }
+
+  /* ---------- teacher-approved resources ---------- */
+  var RESMSG='';
+  function resById(id){ return RESOURCES.filter(function(r){ return r.id===id; })[0]; }
+  function resOK(){ return RESOURCES.filter(function(r){ return r&&/^https:\/\//i.test(r.url||''); }); }
+  function inSources(r){ return S.sources.some(function(x){ return x.link===r.url; }); }
+  function useResource(r,msg){
+    function say(t){ msg.textContent=t; RESMSG=t; }
+    if(inSources(r)){ say('That one is already in My sources.'); renderResources(); return; }
+    if(S.sources.length>=4){ say('You already have 4 sources. Remove one on the Sources tab to add another.'); renderResources(); return; }
+    var ns={id:uid(),name:r.name,link:r.url,checks:[false,false,false,false]}; S.sources.push(ns); FRESH[ns.id]=1; save();
+    say('Added to My sources. Open the Sources tab to check it.'); renderSources(); renderChecks();
+  }
+  function resButtons(r,compact){
+    var msg=h('span',{class:'count',role:'status'});
+    var open=h('a',{class:'btn small',href:r.url,target:'_blank',rel:'noopener',text:'Open site ↗'});
+    var add=h('button',{type:'button',class:'btn small primary',text:inSources(r)?'In My sources':'Use as my source'}); add.disabled=inSources(r);
+    add.addEventListener('click',function(){ useResource(r,msg); add.disabled=true; add.textContent='In My sources'; });
+    return [open,add,msg];
+  }
+  function renderResources(){
+    var list=resOK(), box=$('approved'), pick=$('srcPicker');
+    if(box){
+      box.innerHTML=''; if(RESMSG) box.appendChild(h('p',{class:'resnote',role:'status',text:RESMSG}));
+      if(!list.length) box.appendChild(h('p',{class:'count',text:'Your teacher will tell you which sites to use.'}));
+      list.forEach(function(r){
+        var card=h('div',{class:'rescard'},[h('h4',{text:r.name}),h('p',{class:'lvl',text:r.level||''}),h('p',{text:r.about||''})]);
+        if(r.heads) card.appendChild(h('p',{class:'heads',text:'⚠️ Heads up: '+r.heads}));
+        var acts=h('div',{class:'nacts'}); resButtons(r).forEach(function(x){ acts.appendChild(x); });
+        acts.appendChild(listenBtn(function(){ return r.name+'. '+(r.level||'')+' '+(r.about||'')+(r.heads?' Heads up: '+r.heads:''); },'lesson','🔊'));
+        card.appendChild(acts); box.appendChild(card);
+      });
+    }
+    if(pick){
+      pick.innerHTML=''; pick.appendChild(h('h3',{text:'Choose from your teacher’s list'})); if(RESMSG) pick.appendChild(h('p',{class:'resnote',role:'status',text:RESMSG}));
+      pick.appendChild(h('p',{class:'count',text:'Tap Use as my source to add one. Then check it with the four questions below. You can also type in a book or another source from your teacher.'}));
+      list.forEach(function(r){
+        var row=h('div',{class:'lrow'},[h('p',{},[h('b',{text:r.name}),document.createTextNode(' · '+(r.level||''))])]);
+        var acts=h('div',{class:'nacts'}); resButtons(r,true).forEach(function(x){ acts.appendChild(x); }); row.appendChild(acts); pick.appendChild(row);
+      });
+    }
+  }
+  /* a "where to look" box on each content page */
+  function addLook(){
+    Object.keys(LOOK).forEach(function(ph){
+      var st=document.querySelector('.step[data-phase="'+ph+'"]'); if(!st) return;
+      var rows=LOOK[ph].map(function(x){ return [resById(x[0]),x[1]]; }).filter(function(x){ return x[0]&&/^https:\/\//i.test(x[0].url||''); });
+      if(!rows.length) return;
+      var d=h('div',{class:'look'},[h('h4',{text:'📍 Where to look for this page'})]);
+      rows.forEach(function(x){
+        var r=x[0], row=h('div',{class:'lrow'},[h('p',{},[h('b',{text:r.name+': '}),document.createTextNode(x[1])])]);
+        var acts=h('div',{class:'nacts'},[h('a',{class:'btn small',href:r.url,target:'_blank',rel:'noopener',text:'Open site ↗'})]);
+        row.appendChild(acts); d.appendChild(row);
+      });
+      d.appendChild(h('p',{class:'count',text:'Read a little. Say it in your own words. Then come back and type it. Pick the source.'}));
+      d.appendChild(h('div',{class:'nacts'},[h('button',{type:'button',class:'btn small primary',text:'📄 Back to the source list',onclick:function(){ var i=steps.findIndex(function(x){ return x.dataset.phase==='sources'; }); show(i); }}),h('span',{class:'count',text:'Add or check your sources there.'})]));
+      var anchor=st.querySelector('.std')||st.querySelector('.casefile'); if(anchor) anchor.parentNode.insertBefore(d,anchor.nextSibling);
+    });
+  }
+
+  /* ---------- sources step ---------- */
+  function renderSources(){
+    var box=$('srcList'); box.innerHTML='';
+    S.sources.forEach(function(s,i){
+      var card=h('div',{class:'card srccard'}); if(FRESH[s.id]){ card.classList.add('drop'); delete FRESH[s.id]; }
+      var name=h('input',{type:'text',class:'f','aria-label':'Source '+(i+1)+' name',placeholder:'Name of the site, book, or article'}); name.value=s.name||'';
+      var link=h('input',{type:'text',class:'f','aria-label':'Source '+(i+1)+' link',placeholder:'Web address (optional)'}); link.value=s.link||'';
+      var badge=h('span',{class:'badge'});
+      function paint(){ var ok=reliable(s), n=(s.checks||[]).filter(Boolean).length; badge.className='badge'+(ok?' ok':''); badge.textContent=n+' of 4 checks passed. '+(ok?'Good to use.':'Check again before you rely on it.'); }
+      name.addEventListener('input',function(){ s.name=name.value; save(); renderChecks(); refreshSrcSelects(); });
+      link.addEventListener('input',function(){ s.link=link.value; save(); });
+      card.appendChild(h('div',{class:'lessonhead'},[h('h3',{text:'Source '+(i+1)}),badge]));
+      card.appendChild(h('label',{class:'f',text:'Name'})); card.appendChild(name);
+      card.appendChild(h('label',{class:'f',text:'Link'})); card.appendChild(link);
+      card.appendChild(h('p',{style:'margin:10px 0 4px',text:'Check what is true:'}));
+      TRUST.forEach(function(t,k){
+        var cb=h('input',{type:'checkbox'}); cb.checked=!!(s.checks&&s.checks[k]);
+        cb.addEventListener('change',function(){ s.checks=s.checks||[false,false,false,false]; s.checks[k]=cb.checked; save(); paint(); renderChecks(); });
+        card.appendChild(h('label',{class:'tr'},[cb,document.createTextNode(' '+t)]));
+      });
+      var del=h('button',{type:'button',class:'nbtn',text:'🗑️ Remove this source'});
+      twoTap(del,'🗑️ Remove this source',function(){
+        S.sources=S.sources.filter(function(x){ return x!==s; });
+        Object.keys(S.items).forEach(function(k){ S.items[k].forEach(function(it){ if(it.src===s.id) it.src=''; }); });
+        S.time.forEach(function(it){ if(it.src===s.id) it.src=''; });
+        save(); renderSources(); renderAllSections(); renderChecks();
+      });
+      card.appendChild(del); paint(); box.appendChild(card);
+    });
+    $('srcCount').textContent=S.sources.length+' of 4 sources added.';
+    $('addSrc').disabled=S.sources.length>=4;
+    refreshSrcSelects();
+    if(typeof renderResources==='function'&&$('srcPicker')&&!renderSources.busy){ renderSources.busy=1; renderResources(); renderSources.busy=0; }
+  }
+  $('addSrc').addEventListener('click',function(){ if(S.sources.length<4){ var ns={id:uid(),name:'',link:'',checks:[false,false,false,false]}; S.sources.push(ns); FRESH[ns.id]=1; save(); renderSources(); } });
+
+  /* ---------- fact lists ---------- */
+  function itemText(L,it){
+    if(L.kind==='trait') return it.text+': '+(it.extra||'');
+    return it.text;
+  }
+  function renderList(L,box,sec){
+    box.innerHTML='';
+    var list=arr(L.id), isFact=L.kind==='fact'||L.kind==='quote'||L.kind==='trait';
+    var head=h('div',{class:'lessonhead'},[h('h3',{text:L.label}),listenBtn(function(){ return L.label; },'lesson','🔊')]);
+    box.appendChild(head);
+    var prog=h('p',{class:'count'}); box.appendChild(prog);
+    var err=h('div',{class:'fb no',role:'alert',hidden:'hidden'});
+    /* add form */
+    var form=h('div',{class:'ffrm'});
+    var main, extra=null, sel=null;
+    if(L.kind==='trait'){
+      main=h('input',{type:'text',class:'f','aria-label':'A trait',placeholder:'A trait (one or two words)',maxlength:'40'});
+      extra=h('textarea',{'aria-label':'An example that shows it',placeholder:'An example from her life that shows this trait, in your own words',style:'min-height:60px'});
+    } else if(L.kind==='quote'){
+      main=h('textarea',{'aria-label':'A quote',placeholder:'Type her exact words inside quotation marks',style:'min-height:60px'});
+    } else if(L.kind==='plain'){
+      main=h('input',{type:'text',class:'f','aria-label':L.short,placeholder:'Write one answer',maxlength:'200'});
+    } else {
+      main=h('textarea',{'aria-label':L.short,placeholder:'Write one fact in your own words',style:'min-height:60px'});
+    }
+    noPaste(main,err); if(extra) noPaste(extra,err);
+    form.appendChild(main); if(extra) form.appendChild(extra);
+    if(isFact){ sel=h('select',{class:'f','aria-label':'Which source'}); fillSrcSelect(sel,''); form.appendChild(sel); form.appendChild(srcHint()); }
+    var add=h('button',{type:'button',class:'btn primary',text:'Add'});
+    var full=L.max&&list.length>=L.max; add.disabled=!!full;
+    form.appendChild(add); box.appendChild(form); box.appendChild(err);
+    add.addEventListener('click',function(){
+      var v=main.value.trim(), ex=extra?extra.value.trim():'';
+      if(L.kind==='trait'){ if(!v||words(ex)<4){ err.textContent='Write a trait and an example of at least 4 words.'; err.hidden=false; return; } }
+      else if(L.kind==='quote'){
+        if(words(v)<4||!/["“”]/.test(v)){ err.textContent='A quote needs quotation marks and at least 4 words.'; err.hidden=false; return; }
+      } else if(L.kind==='plain'){ if(words(v)<2){ err.textContent='Write a little more first.'; err.hidden=false; return; } }
+      else { if(words(v)<4){ err.textContent='Write a full fact. Try at least 4 words.'; err.hidden=false; return; } if(words(v)>60){ err.textContent='That is long. Write one fact at a time, in your own words.'; err.hidden=false; return; } }
+      if(isFact){
+        if(!S.sources.some(function(s){ return (s.name||'').trim(); })){ err.textContent='Add a source first on the Sources step.'; err.hidden=false; return; }
+        if(!sel.value){ err.textContent='Pick which source this came from.'; err.hidden=false; return; }
+      }
+      err.hidden=true;
+      var it={id:uid(),text:v,extra:ex}; if(isFact) it.src=sel.value; FRESH[it.id]=1;
+      list.push(it); save(); renderList(L,box,sec); renderSecStatus(sec); renderChecks();
+    });
+    if(L.kind!=='trait'&&L.kind!=='quote') main.addEventListener('keydown',function(e){ if(e.key==='Enter'&&main.tagName==='INPUT'){ e.preventDefault(); add.click(); } });
+    /* cards */
+    var cards=h('div',{class:'notes'}); box.appendChild(cards);
+    list.forEach(function(it){
+      var card=h('div',{class:'note w'}); if(FRESH[it.id]){ card.classList.add('drop'); delete FRESH[it.id]; } card.appendChild(h('p',{class:'ntext',text:itemText(L,it)}));
+      if(isFact){
+        var nm=srcName(it.src);
+        card.appendChild(h('span',{class:'badge'+(nm?' ok':''),text:nm?'Source: '+nm:'⚠️ Pick a source'}));
+        if(!nm){ var fix=h('select',{class:'f','aria-label':'Pick a source'}); fillSrcSelect(fix,''); fix.addEventListener('change',function(){ it.src=fix.value; save(); renderList(L,box,sec); renderSecStatus(sec); renderChecks(); }); card.appendChild(fix); }
+      }
+      var acts=h('div',{class:'nacts'});
+      acts.appendChild(listenBtn(function(){ return itemText(L,it)+(isFact&&srcName(it.src)?'. Source: '+srcName(it.src):''); },'q','🔊'));
+      var edit=h('button',{type:'button',class:'nbtn',text:'✏️ Edit'});
+      edit.addEventListener('click',function(){
+        var ta=h('textarea',{'aria-label':'Edit',style:'min-height:64px'}); ta.value=L.kind==='trait'?(it.extra||''):it.text;
+        var ti=null; if(L.kind==='trait'){ ti=h('input',{type:'text',class:'f','aria-label':'Edit trait'}); ti.value=it.text; }
+        noPaste(ta,err);
+        var ok=h('button',{type:'button',class:'btn small primary',text:'Save'}), no=h('button',{type:'button',class:'btn small',text:'Cancel'});
+        ok.addEventListener('click',function(){ var v=ta.value.trim(); if(!v) return; if(L.kind==='trait'){ it.extra=v; if(ti.value.trim()) it.text=ti.value.trim(); } else it.text=v; save(); renderList(L,box,sec); renderChecks(); });
+        no.addEventListener('click',function(){ renderList(L,box,sec); });
+        card.innerHTML=''; if(ti) card.appendChild(ti); card.appendChild(ta); card.appendChild(h('div',{class:'nacts'},[ok,no])); ta.focus();
+      });
+      var del=h('button',{type:'button',class:'nbtn',text:'🗑️'});
+      twoTap(del,'🗑️',function(){ S.items[L.id]=S.items[L.id].filter(function(x){ return x!==it; }); save(); renderList(L,box,sec); renderSecStatus(sec); renderChecks(); });
+      acts.appendChild(edit); acts.appendChild(del); card.appendChild(acts); cards.appendChild(card);
+    });
+    prog.textContent=L.max?(list.length+' of '+L.max):(list.length+' added. At least '+L.min+' needed'+(list.length>=L.min?'. You have enough. Add more if you find more.':'.'));
+    if(L.id==='res'){
+      var auto=S.sources.filter(function(s){ return (s.name||'').trim(); });
+      if(auto.length) box.appendChild(h('p',{class:'count',text:'Your sources also count as resources: '+auto.map(function(s){ return s.name.trim(); }).join(', ')+'.'}));
+    }
+  }
+  function sectionSources(sec){
+    var used={};
+    sec.lists.forEach(function(L){ arr(L.id).forEach(function(it){ if(it.src&&srcName(it.src)) used[it.src]=1; }); });
+    return Object.keys(used).length;
+  }
+  function renderSecStatus(sec){
+    var el=document.querySelector('[data-secstatus="'+sec.id+'"]'); if(!el) return;
+    var n=sectionSources(sec);
+    el.className='badge'; el.textContent='Sources used on this page: '+n+(n>=2?'.':'. Try for at least 2.');
+  }
+
+  /* ---------- photos with credits ---------- */
+  function shrink(file,cb){
+    var fr=new FileReader();
+    fr.onload=function(){
+      var img=new Image();
+      img.onload=function(){
+        var max=640, sc=Math.min(1,max/Math.max(img.width,img.height)), c=document.createElement('canvas');
+        c.width=Math.max(1,Math.round(img.width*sc)); c.height=Math.max(1,Math.round(img.height*sc));
+        c.getContext('2d').drawImage(img,0,0,c.width,c.height); cb(c.toDataURL('image/jpeg',0.72));
+      };
+      img.onerror=function(){ cb(null); }; img.src=fr.result;
+    };
+    fr.onerror=function(){ cb(null); }; fr.readAsDataURL(file);
+  }
+  function renderImages(box,secId){
+    box.innerHTML='';
+    var list=S.images[secId]||(S.images[secId]=[]);
+    box.appendChild(h('div',{class:'lessonhead'},[h('h3',{text:'🖼️ Pictures'}),h('span',{class:'count',text:list.length+' of 2 photos'})]));
+    box.appendChild(h('p',{class:'count',text:'To use a photo from a website: press and hold the picture, tap Save to Photos, then add it here. Write where it came from. You can also draw your own sketch below.'}));
+    var msg=h('div',{class:'fb no',role:'alert',hidden:'hidden'});
+    var file=h('input',{type:'file',accept:'image/*','aria-label':'Add a photo'}); file.hidden=true;
+    var addb=h('button',{type:'button',class:'btn',text:'📷 Add a photo'}); addb.disabled=list.length>=2;
+    addb.addEventListener('click',function(){ file.click(); });
+    file.addEventListener('change',function(){
+      var f=file.files&&file.files[0]; if(!f) return;
+      shrink(f,function(data){
+        if(!data){ msg.textContent='That photo would not open. Try a different one.'; msg.hidden=false; return; }
+        var np={id:uid(),data:data,credit:''}; list.push(np); FRESH[np.id]=1; save(); renderImages(box,secId); renderChecks();
+      });
+    });
+    box.appendChild(addb); box.appendChild(file); box.appendChild(msg);
+    var grid=h('div',{class:'imgs'});
+    list.forEach(function(p){
+      var cr=h('input',{type:'text',class:'f','aria-label':'Where this photo came from',placeholder:'Where did this photo come from? (site or book name)'}); cr.value=p.credit||'';
+      cr.addEventListener('input',function(){ p.credit=cr.value; save(); renderChecks(); });
+      var del=h('button',{type:'button',class:'nbtn',text:'🗑️ Remove photo'});
+      twoTap(del,'🗑️ Remove photo',function(){ S.images[secId]=S.images[secId].filter(function(x){ return x!==p; }); save(); renderImages(box,secId); renderChecks(); });
+      var pc=h('div',{class:'imgcard'},[h('img',{src:p.data,alt:'A photo I added'}),cr,del]); if(FRESH[p.id]){ pc.classList.add('drop'); delete FRESH[p.id]; } grid.appendChild(pc);
+    });
+    box.appendChild(grid);
+  }
+
+  /* ---------- section pages ---------- */
+  function buildSection(sec){
+    var el=document.querySelector('.step[data-sec="'+sec.id+'"]'); el.innerHTML='';
+    var cf=h('div',{class:'casefile'},[
+      h('div',{class:'cftab',text:'CASE FILE · '+sec.title.toUpperCase()}),
+      h('p',{class:'mission'},[h('b',{text:'Mission: '}),document.createTextNode(sec.mission)]),
+      h('p',{class:'evid'},[h('b',{text:'Evidence to collect: '}),document.createTextNode(sec.lists.map(function(L){ return L.short; }).join(' · '))]),
+      h('p',{class:'count',text:'Take your time. Careful beats fast. If your sources disagree, write what each one says.'})
+    ]);
+    el.appendChild(cf);
+    el.appendChild(h('div',{class:'secbar'},[h('span',{'data-secstatus':sec.id,class:'badge'})]));
+    if(sec.single){
+      var c=h('div',{class:'card'}); c.appendChild(h('h3',{text:sec.single.label}));
+      var inp=h('input',{type:'text',class:'f','aria-label':sec.single.label,placeholder:sec.single.placeholder,maxlength:'60'}); inp.value=S[sec.single.id]||'';
+      inp.addEventListener('input',function(){ S[sec.single.id]=inp.value; save(); renderChecks(); }); c.appendChild(inp); el.appendChild(c);
+    }
+    sec.lists.forEach(function(L){ var card=h('div',{class:'card lcardx'}); el.appendChild(card); renderList(L,card,sec); });
+    var dis=h('div',{class:'card'}); dis.appendChild(h('h3',{text:'Do your sources disagree?'}));
+    dis.appendChild(h('p',{class:'count',text:'Optional. Did two sources say different things about this page? What did you notice, and what did you do about it?'}));
+    var dta=h('textarea',{'aria-label':'Where my sources disagreed',placeholder:'Write what each source said. You can leave this blank if they agreed.'}); dta.value=S.dis[sec.id]||'';
+    var dwarn=h('div',{class:'fb no',role:'alert',hidden:'hidden'}); noPaste(dta,dwarn);
+    dta.addEventListener('input',function(){ S.dis[sec.id]=dta.value; save(); });
+    dis.appendChild(dta); dis.appendChild(dwarn); el.appendChild(dis);
+    var imgs=h('div',{class:'card'}); el.appendChild(imgs); renderImages(imgs,sec.id);
+    el.appendChild(h('div',{class:'card inkcard'},[h('div',{class:'inkbox','data-id':'sk-'+sec.id,'data-label':'✏️ Sketch or draw for '+sec.title,'data-guide':'blank','data-h':'220','data-labels':''}),h('p',{class:'inknote',text:'Draw with your Apple Pencil. Label your sketch.'})]));
+    renderSecStatus(sec);
+  }
+  function renderAllSections(){ SECS.forEach(function(sec){ sec.lists.forEach(function(L){ var box=document.querySelector('.step[data-sec="'+sec.id+'"]'); }); buildSecLists(sec); }); }
+  function buildSecLists(sec){
+    var el=document.querySelector('.step[data-sec="'+sec.id+'"]'); if(!el) return;
+    var boxes=el.querySelectorAll('.lcardx');
+    sec.lists.forEach(function(L,i){ if(boxes[i]) renderList(L,boxes[i],sec); });
+    renderSecStatus(sec);
+  }
+
+  /* ---------- timeline ---------- */
+  function yearVal(s){ var m=String(s||'').match(/\d{3,4}/); return m?parseInt(m[0],10):999999; }
+  function drawTimeline(el,entries,forShot){
+    el.innerHTML='';
+    var sorted=entries.slice().sort(function(a,b){ return yearVal(a.year)-yearVal(b.year); });
+    if(!sorted.length){ el.appendChild(h('p',{class:'empty',text:'No events yet.'})); return; }
+    sorted.forEach(function(e,i){
+      var item=h('div',{class:'tl '+(i%2?'r':'l')},[h('div',{class:'dot'}),h('div',{class:'tlbox'},[h('b',{text:e.year}),h('p',{text:e.text}),h('span',{class:'count',text:srcName(e.src)?'Source: '+srcName(e.src):''})])]);
+      item.style.setProperty('--d',i); if(FRESH['t'+e.id]){ item.classList.add('fresh'); delete FRESH['t'+e.id]; }
+      el.appendChild(item);
+    });
+  }
+  function buildTimeline(){
+    $('tlGoal').textContent=TIMELINE_MIN;
+    var card=$('tlCard'); card.innerHTML='';
+    card.appendChild(h('div',{class:'lessonhead'},[h('h3',{text:'Add an event'}),listenBtn(function(){ return 'Add an event. Type the year and what happened. Pick your source.'; },'lesson','🔊')]));
+    var yr=h('input',{type:'text',class:'f','aria-label':'Year',placeholder:'Year (like 1950)',maxlength:'12',inputmode:'numeric'});
+    var ev=h('textarea',{'aria-label':'What happened',placeholder:'What happened? Write it in your own words.',style:'min-height:60px'});
+    var sel=h('select',{class:'f','aria-label':'Which source'}); fillSrcSelect(sel,'');
+    var err=h('div',{class:'fb no',role:'alert',hidden:'hidden'}); noPaste(ev,err);
+    var add=h('button',{type:'button',class:'btn primary',text:'Add to my timeline'});
+    var prog=h('p',{class:'count'});
+    add.addEventListener('click',function(){
+      if(!/\d{3,4}/.test(yr.value)){ err.textContent='Type a year with 3 or 4 numbers.'; err.hidden=false; return; }
+      if(words(ev.value)<3){ err.textContent='Write what happened. Try at least 3 words.'; err.hidden=false; return; }
+      if(!sel.value){ err.textContent='Pick which source this came from.'; err.hidden=false; return; }
+      err.hidden=true; var ne={id:uid(),year:yr.value.trim(),text:ev.value.trim(),src:sel.value}; S.time.push(ne); FRESH['t'+ne.id]=1; save(); yr.value=''; ev.value=''; fillSrcSelect(sel,''); paint(); renderChecks();
+    });
+    card.appendChild(yr); card.appendChild(ev); card.appendChild(sel); card.appendChild(srcHint()); card.appendChild(add); card.appendChild(err); card.appendChild(prog);
+    var list=h('div',{class:'notes'}); card.appendChild(list);
+    function paint(){
+      prog.textContent=S.time.length+' of '+TIMELINE_MIN+' events'+(S.time.length>=TIMELINE_MIN?'. You have enough. Add more if you find more.':'');
+      list.innerHTML='';
+      S.time.slice().sort(function(a,b){ return yearVal(a.year)-yearVal(b.year); }).forEach(function(e){
+        var c=h('div',{class:'note w'},[h('p',{class:'ntext',text:e.year+': '+e.text}),h('span',{class:'badge'+(srcName(e.src)?' ok':''),text:srcName(e.src)?'Source: '+srcName(e.src):'⚠️ Pick a source'})]);
+        var del=h('button',{type:'button',class:'nbtn',text:'🗑️'}); twoTap(del,'🗑️',function(){ S.time=S.time.filter(function(x){ return x!==e; }); save(); paint(); renderChecks(); });
+        c.appendChild(h('div',{class:'nacts'},[listenBtn(function(){ return e.year+'. '+e.text; },'q','🔊'),del])); list.appendChild(c);
+      });
+      drawTimeline($('tlView'),S.time);
+    }
+    paint();
+    var wrap=card.parentNode; if(!wrap.querySelector('.timg')){
+      var imgs=h('div',{class:'card timg'}); wrap.appendChild(imgs); renderImages(imgs,'time');
+      wrap.appendChild(h('div',{class:'card inkcard'},[h('div',{class:'inkbox','data-id':'sk-time','data-label':'✏️ Sketch an important moment','data-guide':'blank','data-h':'220','data-labels':''}),h('p',{class:'inknote',text:'Draw an important moment with your Apple Pencil.'})]));
+    }
+  }
+
+  /* ---------- steps ---------- */
+  var steps=Array.prototype.slice.call(document.querySelectorAll('.step'));
+  var phasesEl=$('phases');
+  steps.forEach(function(s,i){
+    var b=h('button',{type:'button','data-ph':s.dataset.phase},[h('span',{class:'pe',text:s.dataset.emoji||'🎯'}),document.createTextNode(' '+(s.dataset.title||''))]);
+    b.addEventListener('click',function(){ show(i); });
+    phasesEl.appendChild(h('li',{},[b]));
+  });
+  function show(i){
+    i=Math.max(0,Math.min(steps.length-1,i));
+    stopSpeech(); if(RESMSG){ RESMSG=''; renderResources(); }
+    steps.forEach(function(s,j){ s.hidden=j!==i; });
+    Array.prototype.forEach.call(phasesEl.querySelectorAll('button'),function(b,j){ if(j===i) b.setAttribute('aria-current','step'); else b.removeAttribute('aria-current'); });
+    $('backBtn').disabled=i===0; $('nextBtn').disabled=i===steps.length-1;
+    S.step=i; save(); window.scrollTo({top:0});
+    var cur=steps[i]; cur.classList.remove('enter'); void cur.offsetWidth; cur.classList.add('enter'); setTimeout(function(){ cur.classList.remove('enter'); },1900);
+    var ph=steps[i].dataset.phase;
+    if(ph==='sources') renderSources();
+    if(steps[i].dataset.sec) buildSecLists(SECS.filter(function(x){ return x.id===steps[i].dataset.sec; })[0]);
+    if(ph==='time') buildTimeline();
+    if(ph==='turnin') renderChecks();
+    setTimeout(inkResize,0);
+  }
+  $('backBtn').addEventListener('click',function(){ show(S.step-1); });
+  $('nextBtn').addEventListener('click',function(){ show(S.step+1); });
+
+  /* ---------- checklist, progress, booklet page ---------- */
+  function allFacts(){ var a=[]; SECS.forEach(function(sec){ sec.lists.forEach(function(L){ if(L.kind==='fact'||L.kind==='quote'||L.kind==='trait') arr(L.id).forEach(function(it){ a.push(it); }); }); }); S.time.forEach(function(t){ a.push(t); }); return a; }
+  function checklist(){
+    var out=[], nm=(S.name||'').trim();
+    out.push([nm?'My name is at the top of the page':'Add your name at the top of the page',!!nm]);
+    var good=S.sources.filter(function(s){ return (s.name||'').trim()&&reliable(s); }).length;
+    out.push(['At least '+MIN_SOURCES+' reliable sources ('+good+' so far)',good>=MIN_SOURCES]);
+    out.push(['Years of her life filled in',!!(S.life||'').trim()]);
+    SECS.forEach(function(sec){ sec.lists.forEach(function(L){ var n=arr(L.id).length; out.push([sec.title+': '+L.short+' ('+n+' of '+L.min+')',n>=L.min]); }); });
+    out.push(['Timeline: '+TIMELINE_MIN+' events ('+S.time.length+' so far)',S.time.length>=TIMELINE_MIN]);
+    var facts=allFacts(), withSrc=facts.filter(function(f){ return f.src&&srcName(f.src); }).length;
+    out.push(['Every fact names its source ('+withSrc+' of '+facts.length+')',facts.length>0&&withSrc===facts.length]);
+    var photos=[]; Object.keys(S.images).forEach(function(k){ S.images[k].forEach(function(p){ photos.push(p); }); });
+    var cred=photos.filter(function(p){ return (p.credit||'').trim(); }).length;
+    out.push(['Every photo has a credit ('+cred+' of '+photos.length+')',cred===photos.length]);
+    return out;
+  }
+  function renderChecks(){
+    var c=checklist(), ul=$('turnChecks'); ul.innerHTML='';
+    c.forEach(function(x){ ul.appendChild(h('li',{class:x[1]?'ok':'',text:x[0]})); });
+    var n=c.filter(function(x){ return x[1]; }).length;
+    $('barfill').style.width=Math.round(n/c.length*100)+'%'; $('ptext').textContent=n+' of '+c.length+' booklet checks finished';
+  }
+  function buildShot(){
+    var box=$('shot'); box.innerHTML=''; box.hidden=false;
+    var nm=(S.name||'').trim();
+    box.appendChild(h('div',{class:'shot-head'},[h('h3',{text:'Who Is Jane Goodall? Research Booklet'}),h('div',{text:'By: '+(nm||'(add your name at the top of the page)')}),h('div',{text:new Date().toLocaleString()}),h('div',{class:'stdline',text:'Florida B.E.S.T. standards practiced: '+STDALL.join(', ')})]));
+    if(!nm) box.appendChild(h('div',{class:'warnbox',text:'Your name is missing. Scroll up, add it, then tap “Show my booklet” again.'}));
+    var sc=h('div',{class:'shot-item'},[h('b',{text:'My sources'})]);
+    S.sources.filter(function(s){ return (s.name||'').trim(); }).forEach(function(s){ sc.appendChild(h('p',{text:s.name.trim()+(s.link?' ('+s.link.trim()+')':'')+(reliable(s)?' - checked: reliable':' - needs another check')})); });
+    box.appendChild(sc);
+    SECS.forEach(function(sec){
+      var d=h('div',{class:'shot-sec'},[h('h3',{text:sec.emoji+' '+sec.title})]);
+      if(sec.single&&(S[sec.single.id]||'').trim()) d.appendChild(h('p',{text:sec.single.label+': '+S[sec.single.id].trim()}));
+      sec.lists.forEach(function(L){
+        d.appendChild(h('h4',{text:L.label}));
+        var l=arr(L.id); if(!l.length) d.appendChild(h('p',{class:'empty',text:'Nothing yet'}));
+        l.forEach(function(it){ var t=itemText(L,it); var nmx=it.src?srcName(it.src):''; d.appendChild(h('p',{class:'fact',text:'• '+t+(nmx?'  (Source: '+nmx+')':'')})); });
+      });
+      if((S.dis[sec.id]||'').trim()) d.appendChild(h('p',{class:'fact',text:'Where my sources disagreed: '+S.dis[sec.id].trim()}));
+      (S.images[sec.id]||[]).forEach(function(p){ d.appendChild(h('div',{class:'imgcard'},[h('img',{src:p.data,alt:'A photo I added'}),h('p',{class:'count',text:'Photo credit: '+(p.credit||'(missing)')})])); });
+      var im=inkImage('sk-'+sec.id,700,220); if(im) d.appendChild(h('div',{},[h('p',{class:'count',text:'My sketch'}),im]));
+      box.appendChild(d);
+    });
+    var t=h('div',{class:'shot-sec'},[h('h3',{text:'⏳ Timeline'})]); var tv=h('div',{class:'timeline2'}); t.appendChild(tv); drawTimeline(tv,S.time,true);
+    (S.images.time||[]).forEach(function(p){ t.appendChild(h('div',{class:'imgcard'},[h('img',{src:p.data,alt:'A photo I added'}),h('p',{class:'count',text:'Photo credit: '+(p.credit||'(missing)')})])); });
+    var tim=inkImage('sk-time',700,220); if(tim) t.appendChild(h('div',{},[h('p',{class:'count',text:'My sketch'}),tim]));
+    box.appendChild(t);
+    box.classList.remove('unfolding'); void box.offsetWidth; box.classList.add('unfolding'); setTimeout(function(){ box.classList.remove('unfolding'); },1000);
+    box.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  $('showShot').addEventListener('click',buildShot);
+  $('printShot').addEventListener('click',function(){ if($('shot').hidden) buildShot(); setTimeout(function(){ window.print(); },200); });
+  (function(){
+    var url=CANVAS_URL, q=null;
+    try{ q=new URLSearchParams(location.search).get('canvas'); }catch(e){}
+    if(!url&&q) url=q;
+    var a=$('canvasLink');
+    if(url&&/^https:\/\//i.test(url)){ a.href=url; a.hidden=false; }
+  })();
+
+  /* ---------- clear ---------- */
+  var cb=$('clearAll'), ct=null;
+  cb.addEventListener('click',function(){
+    if(cb.dataset.armed){ try{ localStorage.removeItem(KEY); }catch(e){} location.reload(); }
+    else{ cb.dataset.armed='1'; cb.textContent='Click again to erase everything'; ct=setTimeout(function(){ delete cb.dataset.armed; cb.textContent='Clear my work'; },4000); }
+  });
+
+  /* ---------- animations switch ---------- */
+  (function(){
+    var box=$('animBox'), wrap=$('animWrap');
+    function apply(){ document.body.classList.toggle('noanim',!S.anim); box.checked=!!S.anim; }
+    if(!ANIMATIONS){ wrap.hidden=true; }
+    if(REDUCED){ box.disabled=true; wrap.title='Your iPad is set to Reduce Motion, so animations are off.'; }
+    box.addEventListener('change',function(){ S.anim=box.checked; save(); apply(); });
+    apply();
+  })();
+
+
+  /* ---------- Florida B.E.S.T. standards (Grade 6) ---------- */
+  var STDTEXT={"ELA.6.C.1.4": "Write expository texts to explain and/or analyze information from multiple sources, using a logical organizational structure, relevant elaboration, and varied transitions.", "ELA.6.C.4.1": "Conduct research to answer a question, drawing on multiple reliable and valid sources, and refocusing the inquiry when appropriate.", "ELA.6.C.5.1": "Integrate diverse digital media to enhance audience engagement in oral or written tasks.", "ELA.6.C.5.2": "Use digital tools to produce writing.", "ELA.6.R.3.2": "Paraphrase content from grade-level texts.", "ELA.K12.EE.1.1": "Cite evidence to explain and justify reasoning."};
+  var STDMAP={"sources": ["ELA.6.C.4.1", "ELA.K12.EE.1.1"], "early": ["ELA.6.C.4.1", "ELA.6.R.3.2", "ELA.K12.EE.1.1", "ELA.6.C.5.1"], "edu": ["ELA.6.C.4.1", "ELA.6.R.3.2", "ELA.K12.EE.1.1", "ELA.6.C.5.1"], "acc": ["ELA.6.C.4.1", "ELA.6.R.3.2", "ELA.K12.EE.1.1", "ELA.6.C.5.1"], "chal": ["ELA.6.C.4.1", "ELA.6.R.3.2", "ELA.K12.EE.1.1", "ELA.6.C.5.1"], "facts": ["ELA.6.C.4.1", "ELA.6.R.3.2", "ELA.K12.EE.1.1", "ELA.6.C.5.1"], "time": ["ELA.6.C.4.1", "ELA.K12.EE.1.1"], "turnin": ["ELA.6.C.1.4", "ELA.6.C.5.2"]};
+  var STDTITLE={"sources": "Sources", "early": "Early Life", "edu": "Education & Career", "acc": "Accomplishments", "chal": "Challenges", "facts": "Interesting Facts", "time": "Timeline", "turnin": "Turn In"};
+  var STDALL=[];
+  function addStds(){
+    var all=[], where={};
+    steps.forEach(function(st){
+      var codes=STDMAP[st.dataset.phase]; if(!codes) return;
+      var d=h('div',{class:'std'},[h('b',{text:'📋 Florida B.E.S.T. (Grade 6): '})]);
+      codes.forEach(function(c){ d.appendChild(h('div',{class:'row'},[h('b',{text:c+' '}),document.createTextNode(STDTEXT[c])])); if(all.indexOf(c)<0) all.push(c); (where[c]=where[c]||[]).push(STDTITLE[st.dataset.phase]); });
+      var anchor=st.querySelector('.casefile'); if(anchor) anchor.parentNode.insertBefore(d,anchor.nextSibling); else { var hh=st.querySelector('h2'); if(hh) hh.parentNode.insertBefore(d,hh.nextSibling); }
+    });
+    var start=document.querySelector('.step[data-phase="start"]');
+    var det=h('details',{class:'card stdcard'},[h('summary',{text:'📋 Florida B.E.S.T. ELA Standards for this booklet (Grade 6)'}),h('p',{class:'count',text:'For teachers and families. Benchmark wording is quoted from Florida’s B.E.S.T. Standards for English Language Arts, Grade 6.'})]);
+    var tb=h('tbody'); all.forEach(function(c){ tb.appendChild(h('tr',{},[h('td',{},[h('b',{text:c})]),h('td',{text:STDTEXT[c]}),h('td',{},where[c].reduce(function(a,t,i){ if(i) a.push(document.createElement('br')); a.push(document.createTextNode(t)); return a; },[]))])); });
+    det.appendChild(h('table',{class:'stdtable'},[h('thead',{},[h('tr',{},[h('th',{text:'Benchmark'}),h('th',{text:'What it says'}),h('th',{text:'Where students practice it'})])]),tb]));
+    start.appendChild(det);
+    STDALL=all;
+  }
+
+  /* ---------- audio inside every case file card ---------- */
+  function addCaseAudio(){
+    Array.prototype.forEach.call(document.querySelectorAll('.step .casefile'),function(cf){
+      if(cf.querySelector('.listen')) return;
+      var isBrief=!!cf.closest('.step[data-phase="start"]');
+      var btn=listenBtn(function(){
+        function say(el){ return el?sentence(el.textContent.replace(/\s*·\s*/g,', ')):''; }
+        return [say(cf.querySelector('.cftab')),say(cf.querySelector('.mission')),say(cf.querySelector('.evid')),say(cf.querySelector('.count'))].filter(Boolean).join(' ');
+      },'lesson',isBrief?'🔊 Hear this briefing':'🔊 Hear this mission');
+      cf.appendChild(h('div',{class:'nacts',style:'margin-top:8px'},[btn]));
+    });
+  }
+
+  /* ---------- init ---------- */
+  SECS.forEach(buildSection); addStds(); addLook(); renderResources(); addCaseAudio();
+  buildTimeline(); renderSources(); renderChecks(); info(); initInk();
+  show(S.step||0);
+})();
+</script>
+</body>
+</html>
